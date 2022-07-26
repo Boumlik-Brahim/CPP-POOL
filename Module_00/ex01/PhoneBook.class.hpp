@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 08:35:28 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/25 08:35:37 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/07/25 13:56:55 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/07/26 10:37:15 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_CLASS_H
+#define PHONEBOOK_CLASS_H
+
 #include<iostream>
+#include<string>
 
-int main(int ac, char **av)
+#include"Contact.class.hpp"
+
+class PhoneBook
 {
-    int i;
-    int j;
+    private:
+        Contact contacts[8];
+    public:
+        PhoneBook();
 
-    if (ac == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    else
-    {
-        i = 0;
-        while(av[++i])
-        {
-            j = -1;
-            while(av[i][++j])
-                std::cout << (char)toupper(av[i][j]);
-        }
-        std::cout << std::endl;
-    }
-    return(0);
-}
+        void ft_addcontact();
+        void ft_searchcontact();
+
+        ~PhoneBook();
+};
+
+#endif
