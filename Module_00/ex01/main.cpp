@@ -6,12 +6,12 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 14:13:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/26 11:45:52 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/26 14:44:51 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"PhoneBook.class.hpp"
-#include"Contact.class.hpp"
+#include"PhoneBook.hpp"
+#include"Contact.hpp"
 
 int main()
 {
@@ -30,7 +30,7 @@ int main()
         }        
         else if(input == "SEARCH")
         {
-            std::cout << "> SEARCH" << std::endl;
+            phonebook.ft_searchcontact();
         }
         else if(input == "EXIT")
         {

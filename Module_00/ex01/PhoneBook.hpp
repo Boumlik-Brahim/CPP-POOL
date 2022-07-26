@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.hpp                                  :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 13:56:58 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/26 11:47:57 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/07/25 13:56:55 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/07/26 18:23:29 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-#define CONTACT_CLASS_H
+#ifndef PHONEBOOK_H
+#define PHONEBOOK_H
 
 #include<iostream>
+#include<string>
+#include<iomanip>
+#include"Contact.hpp"
 
-class Contact
+class PhoneBook
 {
     private:
-        std::string first_name;
-        std::string last_name;
-        std::string nickname;
-        std::string phone_number;
-        std::string darkest_secret;
+        Contact contacts[8];
+        int     cnt_index;
+        int     i;
     public:
-        Contact();
-        Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret);
-        ~Contact();
+        PhoneBook();
+
+        void ft_addcontact();
+        void ft_searchcontact();
+
+        ~PhoneBook();
 };
 
 #endif
