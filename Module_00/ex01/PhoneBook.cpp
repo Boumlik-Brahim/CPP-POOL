@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:48:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/26 18:41:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/27 17:31:54 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ PhoneBook::PhoneBook(){}
 
 void PhoneBook::ft_addcontact()
 {
+    bool flag;
+    
     Contact cnctobj;
-       
+    
     std::string f_n;
     std::string l_n;
     std::string nikn;
@@ -26,30 +28,41 @@ void PhoneBook::ft_addcontact()
 
     std::cout << "FIRST NAME: ";
     getline(std::cin, f_n);
+    if (f_n.empty() == true)
+        flag = true;
     cnctobj.setfirst_name(f_n);
     
     std::cout << "LAST NAME: ";
     getline(std::cin, l_n);
+    if (l_n.empty() == true)
+        flag = true;
     cnctobj.setlast_name(l_n);
     
     std::cout << "NICKNAME: ";
     getline(std::cin, nikn);
+    if (nikn.empty() == true)
+        flag = true;
     cnctobj.setnickname(nikn);
     
     std::cout << "PHONE NUMBER: ";
     getline(std::cin, phone_num);
+    if (phone_num.empty() == true)
+        flag = true;
     cnctobj.setphone_number(phone_num);
     
     std::cout << "DARKEST SECRET: ";
     getline(std::cin, dark_sec);
+    if (dark_sec.empty() == true)
+        flag = true;
     cnctobj.setdarkest_secret(dark_sec);
 
-    this->contacts[this->i % 8] = cnctobj;
-    this->i++;
-    if (this->i == 8)
-        this->i = 0;
-    if (this->i <= 8)
-        this->cnt_index = this->i;
+    if(flag == false)
+    {
+        this->contacts[this->i % 8] = cnctobj;
+        this->i++;
+        if (this->i <= 8)
+            this->cnt_index = this->i;
+    }
 }
 
 void PhoneBook::ft_searchcontact()
@@ -73,15 +86,15 @@ void PhoneBook::ft_searchcontact()
     std::cout << "ENTER THE INDEX : ";
     std::cin >> index ;
 
-    if (index > this->cnt_index || index < this->cnt_index)
+    if (index > this->cnt_index || index < 0)
         std::cout << "INVALID INDEX" << std::endl;
     else
     {
-        std::cout << "FIRST NAME: " << this->contacts[i].getfirst_name() << std::endl;
-        std::cout << "LAST NAME: " << this->contacts[i].getlast_name() << std::endl;
-        std::cout << "NICKNAME: " << this->contacts[i].getnickname() << std::endl;
-        std::cout << "PHONE NUMBER: " << this->contacts[i].getphone_number() << std::endl;
-        std::cout << "DARKEST SECRET: " << this->contacts[i].getdarkest_secret() << std::endl;
+        std::cout << "FIRST NAME: " << this->contacts[index].getfirst_name() << std::endl;
+        std::cout << "LAST NAME: " << this->contacts[index].getlast_name() << std::endl;
+        std::cout << "NICKNAME: " << this->contacts[index].getnickname() << std::endl;
+        std::cout << "PHONE NUMBER: " << this->contacts[index].getphone_number() << std::endl;
+        std::cout << "DARKEST SECRET: " << this->contacts[index].getdarkest_secret() << std::endl;
     }
 }
 
