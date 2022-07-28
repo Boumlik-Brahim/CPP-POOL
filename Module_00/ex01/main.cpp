@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 14:13:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/27 09:16:21 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/28 18:30:01 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,18 @@ int main()
     while(1)
     {
         std::cout << "> " ;
-        getline(std::cin,input);
+        if (getline(std::cin,input).eof() == 1)
+        {
+            std::cout << "PHONEBOOK CLOSED" << std::endl;
+            break;   
+        }
         if(input == "ADD")
             phonebook.ft_addcontact();
         else if(input == "SEARCH")
             phonebook.ft_searchcontact();
         else if(input == "EXIT")
         {
-            std::cout << "EXIT" << std::endl;
+            std::cout << "PHONEBOOK CLOSED" << std::endl;
             break;
         }
         else

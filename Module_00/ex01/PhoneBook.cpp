@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:48:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/27 17:31:54 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/28 18:36:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ PhoneBook::PhoneBook(){}
 
 void PhoneBook::ft_addcontact()
 {
-    bool flag;
-    
-    Contact cnctobj;
-    
+    Contact     cnctobj; 
     std::string f_n;
     std::string l_n;
     std::string nikn;
@@ -27,36 +24,27 @@ void PhoneBook::ft_addcontact()
     std::string dark_sec;
 
     std::cout << "FIRST NAME: ";
-    getline(std::cin, f_n);
-    if (f_n.empty() == true)
-        flag = true;
+    if (getline(std::cin, f_n).eof() == 1)
+        return ;
     cnctobj.setfirst_name(f_n);
-    
     std::cout << "LAST NAME: ";
-    getline(std::cin, l_n);
-    if (l_n.empty() == true)
-        flag = true;
+    if (getline(std::cin, l_n).eof() == 1)
+        return ;
     cnctobj.setlast_name(l_n);
-    
     std::cout << "NICKNAME: ";
-    getline(std::cin, nikn);
-    if (nikn.empty() == true)
-        flag = true;
+    if (getline(std::cin, nikn).eof() == 1)
+        return ;
     cnctobj.setnickname(nikn);
-    
     std::cout << "PHONE NUMBER: ";
-    getline(std::cin, phone_num);
-    if (phone_num.empty() == true)
-        flag = true;
+    if (getline(std::cin, phone_num).eof() == 1)
+        return ;
     cnctobj.setphone_number(phone_num);
-    
     std::cout << "DARKEST SECRET: ";
-    getline(std::cin, dark_sec);
-    if (dark_sec.empty() == true)
-        flag = true;
+    if (getline(std::cin, dark_sec).eof() == 1)
+        return ;
     cnctobj.setdarkest_secret(dark_sec);
 
-    if(flag == false)
+    if (!(dark_sec.empty() || phone_num.empty() || nikn.empty() || l_n.empty() || f_n.empty()))
     {
         this->contacts[this->i % 8] = cnctobj;
         this->i++;
@@ -67,8 +55,9 @@ void PhoneBook::ft_addcontact()
 
 void PhoneBook::ft_searchcontact()
 {
-    int index;
-    int i;
+    std::string str;
+    int         index;
+    int         i;
     
     i = -1;
     std::cout << "|" << std::setw(10) << "index" << "|";
@@ -82,10 +71,9 @@ void PhoneBook::ft_searchcontact()
         std::cout << std::setw(10) << this->contacts[i].getlast_name().substr(0, 9) + "." << "|";
         std::cout << std::setw(10) << this->contacts[i].getnickname().substr(0, 9) + "." << "|" << std::endl;
     }
-    
-    std::cout << "ENTER THE INDEX : ";
-    std::cin >> index ;
-
+    std::cout << "ENTER THE INDEX : " ;
+    getline(std::cin,str);
+    std::stringstream(str) >> index;
     if (index > this->cnt_index || index < 0)
         std::cout << "INVALID INDEX" << std::endl;
     else

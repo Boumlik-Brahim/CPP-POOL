@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:56:55 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/27 11:01:41 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/28 18:36:53 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 #define PHONEBOOK_H
 
 #include<iostream>
-#include<string>
-#include<iomanip>
-#include"Contact.hpp"
-
-// ************************************************************************** //
-//                               PhoneBook Class                              //
-// ************************************************************************** //
+# include<string>
+# include<sstream>
+# include<iomanip>
+# include"Contact.hpp"
 class PhoneBook
 {
     private:

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:48:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/27 09:28:06 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/28 17:02:14 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void Contact::setdarkest_secret(std::string darkest_secret)
 {
     this->darkest_secret = darkest_secret;
 }
-
 
 std::string Contact::getfirst_name()
 {
