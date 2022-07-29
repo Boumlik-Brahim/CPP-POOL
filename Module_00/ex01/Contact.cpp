@@ -6,34 +6,13 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:48:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/28 17:02:14 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/29 11:21:06 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Contact.hpp"
 
 Contact::Contact(){}
-
-void Contact::setfirst_name(std::string first_name)
-{
-    this->first_name = first_name;
-}
-void Contact::setlast_name(std::string last_name)
-{
-    this->last_name = last_name;
-}
-void Contact::setnickname(std::string nickname)
-{
-    this->nickname = nickname;
-}
-void Contact::setphone_number(std::string phone_number)
-{
-    this->phone_number =  phone_number;
-}
-void Contact::setdarkest_secret(std::string darkest_secret)
-{
-    this->darkest_secret = darkest_secret;
-}
 
 std::string Contact::getfirst_name()
 {
@@ -54,6 +33,27 @@ std::string Contact::getphone_number()
 std::string Contact::getdarkest_secret()
 {
     return (this->darkest_secret);
+}
+
+void Contact::setfirst_name(std::string first_name)
+{
+    this->first_name = first_name;
+}
+void Contact::setlast_name(std::string last_name)
+{
+    this->last_name = last_name;
+}
+void Contact::setnickname(std::string nickname)
+{
+    this->nickname = nickname;
+}
+void Contact::setphone_number(std::string phone_number)
+{
+    this->phone_number =  phone_number;
+}
+void Contact::setdarkest_secret(std::string darkest_secret)
+{
+    this->darkest_secret = darkest_secret;
 }
 
 Contact::~Contact(){}

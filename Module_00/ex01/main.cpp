@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 14:13:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/28 18:30:01 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/07/29 11:06:30 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 
 int main()
 {
-    std::string input;
-    
     PhoneBook   phonebook;
     Contact     contact;
+    std::string input;
 
     while(1)
     {
