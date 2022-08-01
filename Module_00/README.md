@@ -20,10 +20,10 @@ The destination stream receives output from the program is called output stream.
 ## OOP:
     - Object :
 
-Is the basic unit of object oriented programming. That is both data and function that operate on data are bundled as a unit called as object.
+Is the basic unit of object oriented programming. That is both data and function that operate on data are bundled as a unit called as object.   
     - Class :
 
-A class is a blueprint for the object.We can think of a class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.      
+A class is a blueprint for the object.We can think of a class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.     
     - Data member and member functions:
 
 Data members(int cnt_index, int i) and member functions(void ft_addcontact()void ft_searchcontact()) of a class PhoneBook.
@@ -38,11 +38,11 @@ We can implement Abstraction in C++ using classes. Class helps us to group data 
 Members declared as public in a class, can be accessed from anywhere in the program. Members declared as private in a class, can be accessed only from within the class. 
     - Abstraction in Header files:
 
-For example, consider the pow() method present in math.h header file. Whenever we need to calculate power of a number, we simply call the function pow() present in the math.h header file and pass the numbers as arguments without knowing the underlying algorithm according to which the function is actually calculating power of numbers.
+For example, consider the pow() method present in math.h header file. Whenever we need to calculate power of a number, we simply call the function pow() present in the math.h header file and pass the numbers as arguments without knowing the underlying algorithm according to which the function is actually calculating power of numbers.     
     - Encapsulation:
 
 In normal terms Encapsulation is defined as wrapping up of data and information under a single unit. In Object Oriented Programming, Encapsulation is defined as binding together the data and the functions that manipulates them.
-In C++ encapsulation can be implemented using Class and access modifiers.
+In C++ encapsulation can be implemented using Class and access modifiers.   
     - Getters and Setters:
 
 The getter function is used to retrieve the variable value and the setter function is used to set the variable value.
