@@ -6,13 +6,17 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:48:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/07/28 18:36:43 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/08/01 13:22:03 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"PhoneBook.hpp"
 
-PhoneBook::PhoneBook(){}
+PhoneBook::PhoneBook()
+{
+    this->cnt_index = 0;
+    this->i = 0;
+}
 
 void PhoneBook::ft_addcontact()
 {
@@ -59,6 +63,7 @@ void PhoneBook::ft_searchcontact()
     int         index;
     int         i;
     
+    std::cout << this->cnt_index << std::endl;
     i = -1;
     std::cout << "|" << std::setw(10) << "index" << "|";
     std::cout << std::setw(10) << "first name" << "|";

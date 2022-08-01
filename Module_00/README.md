@@ -54,3 +54,24 @@ Constructor does not have a return value, hence they do not have a return type.
 
 A destructor is also a special member function as a constructor. Destructor destroys the class objects created by the constructor.In destructor, objects are destroyed in the reverse of object creation.
     - ‘this’ pointer :
+
+The this pointer in C++ points to the object that invokes the member function. This keyword is only accessible within the nonstatic member functions of a class/struct/union type.
+There are many ways to use the this pointer: Same class variable and parameter names , Returning the current object.
+    - Date and Time :
+
+There are four time-related types: clock_t, time_t, size_t, and tm. The types - clock_t, size_t and time_t are capable of representing the system time and date as some sort of integer.
+The structure type tm holds the date and time in the form of a C structure having the following elements:
+
+        struct tm {
+            int tm_sec; // seconds of minutes from 0 to 61
+            int tm_min; // minutes of hour from 0 to 59
+            int tm_hour; // hours of day from 0 to 24
+            int tm_mday; // day of month from 1 to 31
+            int tm_mon; // month of year from 0 to 11
+            int tm_year; // year since 1900
+            int tm_wday; // days since sunday
+            int tm_yday; // days since January 1st
+            int tm_isdst; // hours of daylight savings time
+        }
+time_t time(time_t *time); :This returns the current calendar time of the system in number of seconds elapsed since January 1, 1970. If the system has no time, .1 is returned.
+struct tm *localtime(const time_t *time); :This returns a pointer to the tm structure representing local time.
