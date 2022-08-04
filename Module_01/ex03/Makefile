@@ -1,4 +1,4 @@
-NAME = Brain
+NAME = violence
 
 CC = c++
 

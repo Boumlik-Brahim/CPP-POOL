@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 17:51:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/03 11:15:17 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/08/04 14:34:02 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ class Zombie
         Zombie( std::string name );
 
         void announce( void );
-        Zombie* zombieHorde( int N, std::string name );
-        
+        void setname(std::string name);
         ~Zombie();
 };
+
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
