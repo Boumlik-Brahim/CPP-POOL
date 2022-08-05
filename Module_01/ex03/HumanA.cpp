@@ -6,13 +6,11 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:54:15 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/05 15:59:36 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/08/05 16:39:36 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"HumanA.hpp"
-
-// HumanA::HumanA(){}
 
 HumanA::HumanA(std::string name, Weapon &wepona) : _wepona(wepona), _name(name) {}
 
