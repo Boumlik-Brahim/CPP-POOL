@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:26:38 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/05 14:39:15 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/09 18:45:41 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,61 +16,38 @@
 
 int main(int ac, char **av)
 {
-	std::fstream 	newfile;
-	std::ifstream 	init_file;
-	std::ofstream	out_file;
-	std::string 	line;
+	std::string		line;
+	std::size_t		slenght;
+	std::size_t		found;
 	char			*s1;
 	char			*s2;
-	char			ch;
 
-	if (ac == 1)
-		std::cout << "ERROR" << std::endl;
-	else
+	if (ac != 4)
 	{
-		s1 = av[2];
-		s2 = av[3];
-
-		init_file.open("file.txt", std::ios::in | std::ios::out);
-		if (!init_file)
-			std::cout << "file creation failed" << std::endl;
-		else
-			std::cout << "new file created" << std::endl;
-
-		out_file.open("file.replace",std::ios::out);
-		if (!out_file)
-			std::cout << "file creation failed" << std::endl;
-		else
-			std::cout << "new file created" << std::endl;
-
-		if (init_file && out_file)
-		{
-			while (std::getline(init_file, line))
-			{
-				ch = init_file.get();
-				if(ch == s1[0])
-				{
-					int i;
-					i = -1;
-
-					while(s1[++i])
-					{
-						ch = init_file.get();
-						std::cout << ch;
-						if(ch == s1[i])
-							out_file << av[3] << std::endl;
-					}
-				}
-				else 
-					out_file << line << std::endl;
-			}
-			std::cout << "copy finished" << std::endl;
-		}
-		else
-			std::cout << "cannot read file" << std::endl;
-		
-		init_file.close();
-		out_file.close();
+		std::cout << "ERROR" << std::endl;
+		exit(1);
 	}
+	std::ifstream	init_file(av[1]);
+	std::string 	filename = av[1];
+	filename += ".replace";
+	std::ofstream	out_file(filename);
+	if (!out_file || !init_file)
+		std::cout << "file creation failed" << std::endl;
+	else
+		std::cout << "files created succefully" << std::endl;
+	s1 = av[2];
+	s2 = av[3];
+	std::getline(init_file, line, (char)EOF);
+	slenght = strlen(s1);
+	found = line.find(s1, 0, slenght);
+	while (found != std::string::npos)
+	{
+		line.erase(found, slenght);
+		line.insert(found, s2);
+		// found = found + slenght;
+		// std::cout << found << std::endl;
+		found = line.find(s1, 0, slenght);
+	}
+	out_file << line ;
 	return (0);
 }
