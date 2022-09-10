@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 13:36:29 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/04 14:26:55 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/10 17:48:12 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 void randomChump( std::string name )
 {
     Zombie z(name);
-    
     z.announce();
 }
