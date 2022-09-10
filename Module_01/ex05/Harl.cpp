@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:29:55 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/10 13:03:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/10 15:31:44 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,36 +37,15 @@ void Harl::error( void )
 
 void Harl::complain( std::string level )
 {
-    void (Harl::*fptr)( void );
+    int i;
+    void (Harl::*fptr[])( void ) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error}; 
+    std::string comment[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-    // fptr[1] = &Harl::info;
-    // fptr[2] = &Harl::warning;
-    // fptr[3] = &Harl::error;
-    // fptr[0] = &Harl::debug;
-    
-    if (level == "DEBUG")
+    i = -1;
+    while(++i < 4)
     {
-        fptr = &Harl::debug;
-        (this->*fptr)();
-    }
-    else if (level == "INFO")
-    {
-        fptr = &Harl::info;
-        (this->*fptr)();
-    }
-    else if (level == "WARNING")
-    {
-        fptr = &Harl::warning;
-        (this->*fptr)();
-    }
-    else if (level == "ERROR")
-    {
-        fptr = &Harl::error;
-        (this->*fptr)();
-    }
-    else
-    {
-        std::cout << "INVALID COMMENT" << std::endl;
+        if(comment[i] == level)
+            (this->*fptr[i])();
     }
 }
 

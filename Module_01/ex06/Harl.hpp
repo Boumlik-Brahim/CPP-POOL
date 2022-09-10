@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:38:51 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/04 18:39:06 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/10 15:44:47 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define HARL_H
 
 #include<iostream>
+#include<sstream>
 
 class Harl
 {
