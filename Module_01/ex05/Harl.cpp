@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:29:55 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/08 16:03:21 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/10 13:03:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,30 @@ void Harl::complain( std::string level )
 {
     void (Harl::*fptr)( void );
 
+    // fptr[1] = &Harl::info;
+    // fptr[2] = &Harl::warning;
+    // fptr[3] = &Harl::error;
+    // fptr[0] = &Harl::debug;
+    
     if (level == "DEBUG")
     {
         fptr = &Harl::debug;
+        (this->*fptr)();
     }
     else if (level == "INFO")
     {
-       fptr = &Harl::info;
+        fptr = &Harl::info;
+        (this->*fptr)();
     }
     else if (level == "WARNING")
     {
-       fptr = &Harl::warning;
+        fptr = &Harl::warning;
+        (this->*fptr)();
     }
     else if (level == "ERROR")
     {
-       fptr = &Harl::error;
+        fptr = &Harl::error;
+        (this->*fptr)();
     }
     else
     {
