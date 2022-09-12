@@ -26,13 +26,18 @@ When we use a new to create an object dynamically, two things happen: First, mem
     - Pointers: 
 A pointer is a variable that holds the memory address of another variable. A pointer needs to be dereferenced with the * operator to access the memory location it points to. A pointer can be re-assigned. A pointer has its own memory address and size on the stack. A pointer can be assigned NULL directly. You can have a pointer to pointer (known as a double pointer) offering extra levels of indirection.
     - References: 
-A reference variable is an alias, that is, another name for an already existing variable. A reference, like a pointer, is also implemented by storing the address of an object. A reference can be thought of as a constant pointer. A reference cannot be re-assigned, and must be assigned at initialization. A reference shares the same memory address with the original variable but also takes up some space on the stack. A reference cannot be assigned NULL. References only offer one level of indirection.
+A reference variable is an alias, that is, another name for an already existing variable. A reference, like a pointer, is also implemented by storing the address of an object. A reference can be thought of as a constant pointer. A reference cannot be re-assigned, and must be assigned at initialization. A reference shares the same memory address with the original variable but also takes up some space on the stack. A reference cannot be assigned NULL. References only offer one level of indirection. Reference members must be initialized using Initializer List.
+The main use of references is acting as function formal parameters to support pass-by-reference. In an reference variable is passed into a function, the function works on the original copy (instead of a clone copy in pass-by-value). Changes inside the function are reflected outside the function.
+
+You use a pointer when the var can be NULL. You use a reference when you can guarantee a valid/initialised memory address.
 
     int a = 10;
     int &p = a; // It is correct
     // but
     int &p;
     p = a; // It is incorrect as we should declare and initialize references at single step
+
+Favor references over pointers whenever possible.
 ## pointers to members:
 
 ## switch statement:

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:54:20 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/11 18:24:02 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/12 18:14:35 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void HumanB::attack()
 {
     if (!weponb)
     {
-        std::cout << "NO WEPON FOR HUMAIN B" << std::endl;
+        std::cout << "Humain B not armed" << std::endl;
         exit(1);
     }
     std::cout << this->name ;
