@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:54:25 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/05 15:34:20 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/11 16:40:07 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ class Weapon
         Weapon();
         Weapon(std::string type);
         
-        const std::string &getType() const;
-        void setType(std::string type);
-        
+        const std::string   &getType() const;
+        void                setType(std::string type);
+
         ~Weapon();
 };
 

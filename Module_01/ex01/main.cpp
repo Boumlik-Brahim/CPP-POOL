@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 17:50:22 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/04 14:37:41 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/11 13:05:55 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int main( void )
 {
-    Zombie *z1 = zombieHorde( 5, "brahim" );
-    
-    z1[0].announce();
-    z1[1].announce();
-    z1[2].announce();
-    z1[3].announce();
-    z1[4].announce();
-    
+    int     i;
+    Zombie  *z1 = zombieHorde( 5, "brahim" );
+
+    i = -1;
+    while(++i < 5)
+    {
+        z1[i].announce();
+    }
     delete[] z1;
     return(0);
 }
