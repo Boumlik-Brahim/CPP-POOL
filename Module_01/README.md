@@ -38,6 +38,46 @@ You use a pointer when the var can be NULL. You use a reference when you can gua
     p = a; // It is incorrect as we should declare and initialize references at single step
 
 Favor references over pointers whenever possible.
+
+## files in c++:
+    - Classes for File stream operations:
+
+        - ifstream (Stream class to read from files): This class provides input operations. It contains open() function with default input mode. Inherits the functions get(), getline(), read(), seekg() and tellg() functions from the istream.
+    
+        - ofstream (Stream class to write on files): This class provides output operations. It contains open() function with default output mode. Inherits the functions put(),  write(), seekp() and tellp() functions from the ostream.
+
+    - We can open file by:
+
+    passing file name in constructor at the time of object creation or using the open method.
+
+    - Open File by using constructor:
+
+    ifstream fin(“filename”);
+    - Open File by using open method:
+
+    Calling of default constructor 
+    ifstream fin;
+    fin.open(“filename”); 
 ## pointers to members:
 
+    - Pointers to functions:
+
+A pointer to a function points to the address of the executable code of the function. You can use pointers to call functions and to pass functions as arguments to other functions. You cannot perform pointer arithmetic on pointers to functions.
+The type of a pointer to a function is based on both the return type and parameter types of the function.
+
+    int *f(int a);    function f returning an int*
+    int (*g)(int a);  pointer g to a function returning an int
+
+    - Pointers to member functions:
+Pointers to member functions are not like regular pointers to functions, because member functions have a hidden "this" parameter, and so can only be called if you supply an object to play the role of "this", and use some special syntax to tell the compiler to set up the call using the hidden “this”
+parameter.
+
+    - Declaring pointers-to-member-functions:
+return_type (class_name::*pointer_name) (parameter types)
+
+    - Setting a pointer-to-member-function:
+pointer_name = &class_name::member_function_name;
+
+    - Using a pointer-to-member-function to call a function:
+result = (object_ptr->*pointer_name)(arguments);
 ## switch statement:
