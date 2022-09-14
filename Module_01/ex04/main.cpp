@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 18:26:38 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/13 14:07:53 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/14 15:50:19 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 void ft_replace(char	*s1, char	*s2, std::string	&line, std::ofstream	&out_file)
 {
 	std::size_t		slenght;
-	std::size_t		found;
+	std::size_t		index;
 	
 	slenght = strlen(s1);
-	found = line.find(s1, 0, slenght);
-	while (found != std::string::npos)
+	index = line.find(s1, 0, slenght);
+	while (index != std::string::npos)
 	{
 		if (strlen(s1) == 0)
 			break ;
-		line.erase(found, slenght);
-		line.insert(found, s2);
-		found = line.find(s1, 0, slenght);
+		line.erase(index, slenght);
+		line.insert(index, s2);
+		index = line.find(s1, 0, slenght);
 	}
 	out_file << line ;
 }

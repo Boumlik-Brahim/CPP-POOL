@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:54:20 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/12 18:14:35 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/14 15:33:15 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ HumanB::HumanB(){}
 
 HumanB::HumanB(std::string name)
 {
-    weponb = NULL;
+    weponb = nullptr;
     this->name = name;
 }
 
