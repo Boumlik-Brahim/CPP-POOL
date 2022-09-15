@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 10:18:00 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/15 15:36:26 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/15 15:22:04 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/15 15:47:56 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,16 @@ const int Fixed::fractionalbits = 8;
 Fixed::Fixed( void ): fixedpointvalue(0) 
 {
     std::cout << "Default constructor called" << std::endl;
+}
+
+Fixed::Fixed( const int intval )
+{
+    
+}
+
+Fixed::Fixed( const float floatval )
+{
+    
 }
 
 Fixed::Fixed( const Fixed &obj )
@@ -31,6 +41,21 @@ Fixed & Fixed::operator = ( const Fixed &obj )
     if(fixedpointvalue != obj.fixedpointvalue)
         fixedpointvalue = obj.getRawBits();
     return *this;
+}
+
+float Fixed::toFloat( void ) const
+{
+
+}
+
+int Fixed::toInt( void ) const
+{
+    
+}
+
+void Fixed::overload(std::ostream outobj)
+{
+    
 }
 
 int Fixed::getRawBits( void ) const
