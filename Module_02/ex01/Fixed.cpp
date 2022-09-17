@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:22:04 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/15 15:47:56 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/17 18:13:45 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ Fixed::Fixed( void ): fixedpointvalue(0)
 
 Fixed::Fixed( const int intval )
 {
-    
+    std::cout << "Int constructor called" << std::endl;
+    fixedpointvalue = intval << fractionalbits;
 }
 
 Fixed::Fixed( const float floatval )
 {
-    
+    std::cout << "Float constructor called" << std::endl;
+    fixedpointvalue = round(floatval * (1 << fractionalbits));
 }
 
 Fixed::Fixed( const Fixed &obj )
@@ -45,22 +47,28 @@ Fixed & Fixed::operator = ( const Fixed &obj )
 
 float Fixed::toFloat( void ) const
 {
-
+    float result;
+    
+    result = fixedpointvalue / pow(2, fractionalbits);
+    return(result);
 }
 
 int Fixed::toInt( void ) const
 {
-    
+    int result;
+
+    result = fixedpointvalue >> fractionalbits;
+    return(result);
 }
 
-void Fixed::overload(std::ostream outobj)
+std::ostream& operator << (std::ostream &outobj, const Fixed &obj)
 {
-    
+    outobj << obj.toFloat();
+    return(outobj);
 }
 
 int Fixed::getRawBits( void ) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return(this->fixedpointvalue);
 }
 

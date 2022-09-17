@@ -6,13 +6,14 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:22:07 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/15 15:47:13 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/17 17:58:16 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HARL_H
 #define HARL_H
 
+#include<math.h>
 #include<iostream>
 
 class Fixed
@@ -29,13 +30,12 @@ class Fixed
         
         float toFloat( void ) const;
         int toInt( void ) const;
-        void overload(std::ostream outobj);
         
         int getRawBits( void ) const;
         void setRawBits( int const raw );
         
         ~Fixed();
 };
-
+std::ostream & operator << (std::ostream &outobj, const Fixed &obj);
 
 #endif

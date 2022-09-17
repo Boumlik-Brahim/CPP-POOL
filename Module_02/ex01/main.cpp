@@ -6,15 +6,15 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:22:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/15 15:29:59 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/17 18:12:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Fixed.hpp"
 #include <iostream>
 
-int main( void ) {
-    
+int main( void ) 
+{
     Fixed a;
     Fixed const b( 10 );
     Fixed const c( 42.42f );
