@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:22:07 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/17 18:19:57 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/17 18:19:02 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/17 18:44:40 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,12 @@ class Fixed
         Fixed( const float floatval );
         Fixed( const Fixed &obj );
         Fixed & operator = ( const Fixed &obj );
-        
+
+        // Fixed & operator + ( const Fixed &obj );
+        // Fixed & operator - ( const Fixed &obj );
+        // Fixed & operator * ( const Fixed &obj );
+        // Fixed & operator / ( const Fixed &obj );
+
         float toFloat( void ) const;
         int toInt( void ) const;
         
@@ -36,6 +41,13 @@ class Fixed
         
         ~Fixed();
 };
+
+bool operator > ( const Fixed &obj, const Fixed &obj1 );
+bool operator < ( const Fixed &obj, const Fixed &obj1 );
+bool operator >= ( const Fixed &obj, const Fixed &obj1 );
+bool operator <= ( const Fixed &obj, const Fixed &obj1 );
+bool operator == ( const Fixed &obj, const Fixed &obj1 );
+bool operator != ( const Fixed &obj, const Fixed &obj1 );
 std::ostream & operator << (std::ostream &outobj, const Fixed &obj);
 
 #endif
