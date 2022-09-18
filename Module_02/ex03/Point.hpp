@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 10:17:22 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 19:00:59 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/18 18:55:09 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/18 19:04:49 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-#define FIXED_H
+#ifndef POINT_H
+#define POINT_H
 
 #include<iostream>
-class Fixed
+
+class Point
 {
     private:
-        int                 fixedpointvalue;
-        static const int    fractionalbits;
+        
     public:
-        Fixed( void );
-        Fixed( const Fixed &obj );
-        Fixed & operator = ( const Fixed &obj );
-        int getRawBits( void ) const;
-        void setRawBits( int const raw );
-        ~Fixed();
+        Point();
+        ~Point();
 };
 
 #endif

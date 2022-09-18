@@ -6,12 +6,12 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:19:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 18:47:36 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/18 19:00:31 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_H
-#define HARL_H
+#ifndef FIXED_H
+#define FIXED_H
 
 #include<cmath>
 #include<iostream>

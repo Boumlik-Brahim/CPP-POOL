@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:22:07 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 19:00:46 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/18 18:55:00 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/18 19:01:39 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,38 @@ class Fixed
         Fixed( const float floatval );
         Fixed( const Fixed &obj );
         Fixed & operator = ( const Fixed &obj );
-        
+
         float toFloat( void ) const;
         int toInt( void ) const;
+
+        static Fixed & max( Fixed &fix1, Fixed &fix2 );
+        static const Fixed & max( const Fixed &fix1, const Fixed &fix2 );
+        static Fixed & min( Fixed &fix1, Fixed &fix2 );
+        static const Fixed & min( const Fixed &fix1, const Fixed &fix2 );
+        
+        Fixed & operator ++ ( );
+        Fixed & operator -- ( );
+        Fixed operator ++ ( int );
+        Fixed operator -- ( int );
+
+        Fixed operator + ( const Fixed &obj );
+        Fixed operator - ( const Fixed &obj );
+        Fixed operator * ( const Fixed &obj );
+        Fixed operator / ( const Fixed &obj );
+
+        bool operator > ( const Fixed &obj );
+        bool operator < ( const Fixed &obj );
+        bool operator >= ( const Fixed &obj );
+        bool operator <= ( const Fixed &obj );
+        bool operator == ( const Fixed &obj );
+        bool operator != ( const Fixed &obj );
         
         int getRawBits( void ) const;
         void setRawBits( int const raw );
         
         ~Fixed();
 };
+
 std::ostream & operator << (std::ostream &outobj, const Fixed &obj);
 
 #endif
