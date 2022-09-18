@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:18:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 08:06:58 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/18 18:47:13 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 const int Fixed::fractionalbits = 8;
 
-Fixed::Fixed( void ): fixedpointvalue(0) 
-{
-    std::cout << "Default constructor called" << std::endl;
-}
+/*-----------------------------------------------------------------------------------------------*/
+
+Fixed::Fixed( void ): fixedpointvalue(0) {}
 
 Fixed::Fixed( const int intval )
 {
-    std::cout << "Int constructor called" << std::endl;
     fixedpointvalue = intval << fractionalbits;
 }
 
 Fixed::Fixed( const float floatval )
 {
-    std::cout << "Float constructor called" << std::endl;
     fixedpointvalue = round(floatval * (1 << fractionalbits));
 }
 
@@ -45,6 +42,8 @@ Fixed & Fixed::operator = ( const Fixed &obj )
     return *this;
 }
 
+/*-----------------------------------------------------------------------------------------------*/
+
 float Fixed::toFloat( void ) const
 {
     float result;
@@ -61,56 +60,132 @@ int Fixed::toInt( void ) const
     return(result);
 }
 
+Fixed & Fixed::max( Fixed &fix1, Fixed &fix2 )
+{
+    if (fix1.fixedpointvalue > fix2.fixedpointvalue)
+    {
+        return (fix1);
+    }
+    return (fix2);
+}
+
+const Fixed & Fixed::max( const Fixed &fix1, const Fixed &fix2 )
+{
+    if (fix1.fixedpointvalue > fix2.fixedpointvalue)
+    {
+        return (fix1);
+    }
+    return (fix2);
+}
+
+Fixed & Fixed::min( Fixed &fix1, Fixed &fix2 )
+{
+    if (fix1.fixedpointvalue < fix2.fixedpointvalue)
+    {
+        return (fix1);
+    }
+    return (fix2);
+}
+
+const Fixed & Fixed::min( const Fixed &fix1, const Fixed &fix2 )
+{
+    if (fix1.fixedpointvalue < fix2.fixedpointvalue)
+    {
+        return (fix1);
+    }
+    return (fix2);
+}
+
 /*-----------------------------------------------------------------------------------------------*/
 
-bool operator > ( const Fixed &obj, const Fixed &obj1 )
-{
-    return(obj.toInt() > obj1.toInt());
+Fixed & Fixed::operator ++ ( )
+{   
+    ++fixedpointvalue;
+    return(*this);
 }
 
-bool operator < ( const Fixed &obj, const Fixed &obj1 )
+Fixed Fixed::operator ++ ( int i)
 {
-    return(obj.toInt() < obj1.toInt());
+    Fixed tmp(toFloat());
+
+    fixedpointvalue++;
+    return(tmp);
 }
 
-bool operator >= ( const Fixed &obj, const Fixed &obj1 )
+Fixed & Fixed::operator -- ( )
 {
-    return(obj.toInt() >= obj1.toInt());
+    --fixedpointvalue;
+    return(*this);
 }
 
-bool operator <= ( const Fixed &obj, const Fixed &obj1 )
+Fixed Fixed::operator -- ( int i)
 {
-    return(obj.toInt() <= obj1.toInt());
+    Fixed tmp(toFloat());
+
+    fixedpointvalue--;
+    return(tmp);
 }
 
-bool operator == ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator > ( const Fixed &obj)
 {
-    return(obj.toInt() == obj1.toInt() && obj.toFloat() == obj1.toFloat());
+    return(fixedpointvalue > obj.fixedpointvalue);
 }
 
-bool operator != ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator < ( const Fixed &obj )
 {
-    return(obj.toInt() != obj1.toInt() || obj.toFloat() != obj1.toFloat());
+    return(fixedpointvalue < obj.fixedpointvalue);
 }
 
-Fixed operator + ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator >= ( const Fixed &obj )
 {
-    return(obj.toInt() + obj1.toInt());
+    return(fixedpointvalue >= obj.fixedpointvalue);
 }
 
-Fixed operator - ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator <= ( const Fixed &obj )
 {
-    return(obj.toInt() - obj1.toInt());
+    return(fixedpointvalue <= obj.fixedpointvalue);
 }
 
-Fixed operator * ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator == ( const Fixed &obj )
 {
-    return(obj.toInt() * obj1.toInt());
+    return(fixedpointvalue == obj.fixedpointvalue);
 }
 
-Fixed operator / ( const Fixed &obj, const Fixed &obj1 )
+bool Fixed::operator != ( const Fixed &obj )
 {
-    return(obj.toInt() / obj1.toInt());
+    return(fixedpointvalue != obj.fixedpointvalue);
+}
+
+Fixed  Fixed::operator + ( const Fixed &obj )
+{
+    Fixed tmp;
+    
+    tmp.fixedpointvalue = fixedpointvalue + obj.toInt();
+    return(tmp);
+}
+
+Fixed  Fixed::operator - ( const Fixed &obj )
+{
+    Fixed tmp;
+    
+    tmp.fixedpointvalue = fixedpointvalue - obj.toInt();
+    return(tmp);
+}
+
+Fixed Fixed::operator * ( const Fixed &obj )
+{
+    Fixed tmp;
+    
+    tmp.fixedpointvalue = fixedpointvalue * obj.toInt();
+    return(tmp);
+}
+
+Fixed  Fixed::operator / ( const Fixed &obj )
+{
+    Fixed tmp;
+    
+    tmp.fixedpointvalue = fixedpointvalue / obj.toInt();
+    return(tmp);
 }
 
 std::ostream& operator << (std::ostream &outobj, const Fixed &obj)
@@ -131,7 +206,6 @@ void Fixed::setRawBits( int const raw )
     this->fixedpointvalue = raw;
 }
 
-Fixed::~Fixed()
-{
-    std::cout << "Destructor called" << std::endl;
-}
+/*-----------------------------------------------------------------------------------------------*/
+
+Fixed::~Fixed() {}

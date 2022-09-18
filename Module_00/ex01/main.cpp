@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 14:13:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/08/01 13:21:41 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/18 11:45:04 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
         if (getline(std::cin,input).eof() == 1)
         {
             std::cout << "PHONEBOOK CLOSED" << std::endl;
-            break;   
+            break;
         }
         if(input == "ADD")
             phonebook.ft_addcontact();
