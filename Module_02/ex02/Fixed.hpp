@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:19:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/17 18:44:40 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/18 08:14:14 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,6 @@ class Fixed
         Fixed( const Fixed &obj );
         Fixed & operator = ( const Fixed &obj );
 
-        // Fixed & operator + ( const Fixed &obj );
-        // Fixed & operator - ( const Fixed &obj );
-        // Fixed & operator * ( const Fixed &obj );
-        // Fixed & operator / ( const Fixed &obj );
-
         float toFloat( void ) const;
         int toInt( void ) const;
         
@@ -41,6 +36,12 @@ class Fixed
         
         ~Fixed();
 };
+Fixed operator ++ ( const Fixed &obj);
+
+Fixed operator + ( const Fixed &obj, const Fixed &obj1 );
+Fixed operator - ( const Fixed &obj, const Fixed &obj1 );
+Fixed operator * ( const Fixed &obj, const Fixed &obj1 );
+Fixed operator / ( const Fixed &obj, const Fixed &obj1 );
 
 bool operator > ( const Fixed &obj, const Fixed &obj1 );
 bool operator < ( const Fixed &obj, const Fixed &obj1 );

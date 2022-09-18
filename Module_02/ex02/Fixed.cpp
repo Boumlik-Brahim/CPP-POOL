@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:18:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/17 18:48:45 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/18 08:06:58 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,34 +61,56 @@ int Fixed::toInt( void ) const
     return(result);
 }
 
+/*-----------------------------------------------------------------------------------------------*/
+
 bool operator > ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() > obj1.toInt());
 }
 
 bool operator < ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() < obj1.toInt());
 }
 
 bool operator >= ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() >= obj1.toInt());
 }
 
 bool operator <= ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() <= obj1.toInt());
 }
 
 bool operator == ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() == obj1.toInt() && obj.toFloat() == obj1.toFloat());
 }
 
 bool operator != ( const Fixed &obj, const Fixed &obj1 )
 {
-    return();
+    return(obj.toInt() != obj1.toInt() || obj.toFloat() != obj1.toFloat());
+}
+
+Fixed operator + ( const Fixed &obj, const Fixed &obj1 )
+{
+    return(obj.toInt() + obj1.toInt());
+}
+
+Fixed operator - ( const Fixed &obj, const Fixed &obj1 )
+{
+    return(obj.toInt() - obj1.toInt());
+}
+
+Fixed operator * ( const Fixed &obj, const Fixed &obj1 )
+{
+    return(obj.toInt() * obj1.toInt());
+}
+
+Fixed operator / ( const Fixed &obj, const Fixed &obj1 )
+{
+    return(obj.toInt() / obj1.toInt());
 }
 
 std::ostream& operator << (std::ostream &outobj, const Fixed &obj)
@@ -96,6 +118,8 @@ std::ostream& operator << (std::ostream &outobj, const Fixed &obj)
     outobj << obj.toFloat();
     return(outobj);
 }
+
+/*-----------------------------------------------------------------------------------------------*/
 
 int Fixed::getRawBits( void ) const
 {
