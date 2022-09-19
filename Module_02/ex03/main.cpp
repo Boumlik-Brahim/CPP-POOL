@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:58:47 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/19 12:06:21 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/19 13:30:37 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,23 @@
 
 int main()
 {
+    // Point a(0, 0);
+    // Point b(20, 0);
+    // Point c(10, 30);
+    // Point Point(10, 15);
+    
+    // Point a(0, 3.02);
+    // Point b(2.5, 0);
+    // Point c(5, 3.2);
+    // // Point Point(1.5, 1.5);
+    // // Point Point(4.18, 3.02);
+    // Point Point(5.18, 3.02);
+    
     Point a(0, 0);
-    // std::cout << "ageter=========" << a.getx() << std::endl;
-    // std::cout << "ageter=========" << a.gety() << std::endl;
-    Point b(20, 0);
-    // std::cout << "bgeter=========" << b.getx() << std::endl;
-    // std::cout << "bgeter=========" << b.gety() << std::endl;
-    Point c(10, 30);
-    Point Point(10, 15);
-    // std::cout << "cgeter=========" << c.getx() << std::endl;
-    // std::cout << "cgeter=========" << c.gety() << std::endl;
+    Point b(5.12, 4.16);
+    Point c(1.18, -6.49);
+    // Point Point(2.56, 2.08);
+    Point Point(4.18, 3.02);
     
     if (bsp(a, b, c, Point))
     {

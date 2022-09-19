@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 10:18:00 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/15 15:36:26 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/19 15:03:29 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 const int Fixed::fractionalbits = 8;
 
-Fixed::Fixed( void ): fixedpointvalue(0) 
+Fixed::Fixed( void ): fixedpointvalue(0)
 {
     std::cout << "Default constructor called" << std::endl;
 }

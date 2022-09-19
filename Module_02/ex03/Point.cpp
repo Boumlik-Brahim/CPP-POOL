@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:55:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/19 11:52:47 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/19 13:21:46 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ Point::Point(): x(0), y(0) {}
 
 Point::Point(const float x, const float y) : x(x), y(y) {}
 
-Point::Point( const Point &obj)
-{
-    *this = obj;
-}
+Point::Point( const Point &obj) : x(obj.x), y(obj.y) {}
 
 Point & Point::operator = ( const Point &obj )
 {
