@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:22:07 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 19:00:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/20 18:20:49 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,15 @@ class Fixed
         Fixed( const Fixed &obj );
         Fixed & operator = ( const Fixed &obj );
         
-        float toFloat( void ) const;
-        int toInt( void ) const;
+        float   toFloat( void ) const;
+        int     toInt( void ) const;
         
-        int getRawBits( void ) const;
-        void setRawBits( int const raw );
+        int     getRawBits( void ) const;
+        void    setRawBits( int const raw );
         
         ~Fixed();
 };
+
 std::ostream & operator << (std::ostream &outobj, const Fixed &obj);
 
 #endif
