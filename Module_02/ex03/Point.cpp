@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:55:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/19 13:21:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 15:50:57 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Point & Point::operator = ( const Point &obj )
 
 Fixed Point::getx() const
 {
-    return( this->x );   
+    return( this->x ); 
 }
 
 Fixed Point::gety() const

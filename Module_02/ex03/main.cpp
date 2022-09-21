@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:58:47 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/19 13:30:37 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 15:49:24 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main()
     Point a(0, 0);
     Point b(5.12, 4.16);
     Point c(1.18, -6.49);
-    // Point Point(2.56, 2.08);
-    Point Point(4.18, 3.02);
+    Point Point(2.56, 2.08);
+    // Point Point(4.18, 3.02);
     
     if (bsp(a, b, c, Point))
     {

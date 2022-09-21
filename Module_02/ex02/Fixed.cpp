@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:18:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/20 18:57:45 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 15:41:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 const int Fixed::fractionalbits = 8;
 
-/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
 
 Fixed::Fixed( void ): fixedpointvalue(0) {}
 
@@ -42,7 +42,9 @@ Fixed & Fixed::operator = ( const Fixed &obj )
     return *this;
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------*/
 
 float Fixed::toFloat( void ) const
 {
@@ -96,6 +98,8 @@ const Fixed & Fixed::min( const Fixed &fix1, const Fixed &fix2 )
     return (fix2);
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+
 /*------------------------------increment and decrement operators-----------------------------------*/
 
 Fixed & Fixed::operator ++ ( )
@@ -104,7 +108,7 @@ Fixed & Fixed::operator ++ ( )
     return(*this);
 }
 
-Fixed Fixed::operator ++ ( int i)
+Fixed Fixed::operator ++ ( int i )
 {
     Fixed tmp(toFloat());
 
@@ -118,7 +122,7 @@ Fixed & Fixed::operator -- ( )
     return(*this);
 }
 
-Fixed Fixed::operator -- ( int i)
+Fixed Fixed::operator -- ( int i )
 {
     Fixed tmp(toFloat());
 
@@ -162,11 +166,13 @@ bool Fixed::operator != ( const Fixed &obj )
 
 /*------------------------------Relational Operators Overloading------------------------------------*/
 
+/*--------------------------------------------------------------------------------------------------*/
+
 Fixed  Fixed::operator + ( const Fixed &obj )
 {
     Fixed tmp;
     
-    tmp.fixedpointvalue = fixedpointvalue + obj.toInt();
+    tmp.fixedpointvalue = fixedpointvalue + obj.getRawBits();
     return(tmp);
 }
 
@@ -174,7 +180,7 @@ Fixed  Fixed::operator - ( const Fixed &obj )
 {
     Fixed tmp;
     
-    tmp.fixedpointvalue = fixedpointvalue - obj.toInt();
+    tmp.fixedpointvalue = fixedpointvalue - obj.getRawBits();
     return(tmp);
 }
 
@@ -194,13 +200,19 @@ Fixed  Fixed::operator / ( const Fixed &obj )
     return(tmp);
 }
 
+/*--------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------Input/Output Operators Overloading------------------------------*/
+
 std::ostream& operator << (std::ostream &outobj, const Fixed &obj)
 {
     outobj << obj.toFloat();
     return(outobj);
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+/*----------------------------------Input/Output Operators Overloading------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------*/
 
 int Fixed::getRawBits( void ) const
 {
@@ -212,6 +224,6 @@ void Fixed::setRawBits( int const raw )
     this->fixedpointvalue = raw;
 }
 
-/*-----------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
 
 Fixed::~Fixed() {}

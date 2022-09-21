@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:55:00 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/18 19:01:39 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 15:43:46 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,20 @@ class Fixed
         Fixed operator ++ ( int );
         Fixed operator -- ( int );
 
-        Fixed operator + ( const Fixed &obj );
-        Fixed operator - ( const Fixed &obj );
-        Fixed operator * ( const Fixed &obj );
-        Fixed operator / ( const Fixed &obj );
+        Fixed   operator + ( const Fixed &obj );
+        Fixed   operator - ( const Fixed &obj );
+        Fixed   operator * ( const Fixed &obj );
+        Fixed   operator / ( const Fixed &obj );
 
-        bool operator > ( const Fixed &obj );
-        bool operator < ( const Fixed &obj );
-        bool operator >= ( const Fixed &obj );
-        bool operator <= ( const Fixed &obj );
-        bool operator == ( const Fixed &obj );
-        bool operator != ( const Fixed &obj );
+        bool    operator > ( const Fixed &obj );
+        bool    operator < ( const Fixed &obj );
+        bool    operator >= ( const Fixed &obj );
+        bool    operator <= ( const Fixed &obj );
+        bool    operator == ( const Fixed &obj );
+        bool    operator != ( const Fixed &obj );
         
-        int getRawBits( void ) const;
-        void setRawBits( int const raw );
+        int     getRawBits( void ) const;
+        void    setRawBits( int const raw );
         
         ~Fixed();
 };

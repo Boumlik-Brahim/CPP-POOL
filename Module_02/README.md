@@ -27,6 +27,7 @@ The main difference between Copy Constructor and Assignment Operator is that the
 
 ## Ad-hoc polymorphism:
 
+Ad-hoc Polymorphism, also called as Overloading.Ad-hoc Polymorphism allows functions having same name to act differently for different types.
 ## operator overloading:
 
 Overloaded operators are functions with special names: the keyword "operator" followed by the symbol for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.
@@ -34,3 +35,30 @@ Overloaded operators are functions with special names: the keyword "operator" fo
 - You cannot overload the following operators: . .* :: ?:
 - You cannot overload the preprocessor symbols # and ##
 - An operator function can be either a nonstatic member function, or a nonmember function with at least one parameter that has class, reference to class, enumeration, or reference to enumeration type.
+
+    -Unary Operators Overloading :
+
+The unary operators operate on a single operand.The unary operators operate on the object for which they were called.
+
+- examples:
+    - The increment (++) and decrement (--) operators.
+    - The unary minus (-) operator.
+ 
+    -Binary Operators Overloading :
+
+The binary operators take two arguments.
+
+- examples:
+    - addition (+) operator, subtraction (-) operator and division (/) operator.
+
+    -Input/Output Operators Overloading :
+
+C++ is able to input and output the built-in data types using the stream extraction operator >> and the stream insertion operator <<. The stream insertion and stream extraction operators also can be overloaded to perform input and output for user-defined types like an object.
+
+    -Overloading Increment ++ & Decrement -- :
+
+increment (++) and decrement (--) operators are two important unary operators in C++.
+
+    - Relational Operators Overloading :
+
+There are various relational operators supported by C++ language like (<, >, <=, >=, ==, etc.) which can be used to compare C++ built-in data types.You can overload any of these operators, which can be used to compare the objects of a class.

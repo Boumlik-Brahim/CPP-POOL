@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:55:09 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/19 14:03:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 15:42:03 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class Point
     public:
         Point();
         Point(const float x, const float y);
-        Point( const Point &obj);
+        Point( const Point &obj );
         
         Point & operator = ( const Point &obj );
 
-        Fixed getx() const;
-        Fixed gety() const;
+        Fixed   getx() const;
+        Fixed   gety() const;
         ~Point();
 };
 
