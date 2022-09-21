@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:18:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/21 15:41:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/21 16:45:47 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed::Fixed( const int intval )
 
 Fixed::Fixed( const float floatval )
 {
-    fixedpointvalue = round(floatval * (1 << fractionalbits));
+    fixedpointvalue = roundf(floatval * (1 << fractionalbits));
 }
 
 Fixed::Fixed( const Fixed &obj )
@@ -37,7 +37,7 @@ Fixed::Fixed( const Fixed &obj )
 Fixed & Fixed::operator = ( const Fixed &obj )
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if(fixedpointvalue != obj.fixedpointvalue)
+    if(this != &obj)
         fixedpointvalue = obj.getRawBits();
     return *this;
 }
@@ -188,7 +188,7 @@ Fixed Fixed::operator * ( const Fixed &obj )
 {
     Fixed tmp;
     
-    tmp.fixedpointvalue = fixedpointvalue * obj.toInt();
+    tmp.fixedpointvalue = fixedpointvalue * obj.toFloat();
     return(tmp);
 }
 
@@ -196,7 +196,7 @@ Fixed  Fixed::operator / ( const Fixed &obj )
 {
     Fixed tmp;
     
-    tmp.fixedpointvalue = fixedpointvalue / obj.toInt();
+    tmp.fixedpointvalue = fixedpointvalue / obj.toFloat();
     return(tmp);
 }
 
