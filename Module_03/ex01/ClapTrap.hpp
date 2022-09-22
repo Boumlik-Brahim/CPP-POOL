@@ -6,14 +6,15 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:48 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 16:02:00 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/22 17:57:04 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_H
 #define CLAPTRAP_H
 
-#include<iostream>
+# include <iostream>
+# include <string>
 
 class ClapTrap
 {

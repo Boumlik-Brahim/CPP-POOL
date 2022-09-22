@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:51 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 16:04:38 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/22 18:18:16 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 ClapTrap::ClapTrap() : hitpoint(10), energypoint(10), attackdamage(0) 
 {
-     std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default Constructor called of ClapTrap" << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ): name(name) 
 {
-    std::cout << "name constructor called" << std::endl;
+    std::cout << "parametrized Constructor called of ClapTrap" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &obj)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy Constructor called of ClapTrap" << std::endl;
     name = obj.name;
     hitpoint = obj.hitpoint;
     energypoint = obj.energypoint;
@@ -58,7 +58,6 @@ void    ClapTrap::attack(const std::string& target)
     }
     std::cout << "ClapTrap" << name << "attacks " << target << ", causing " << attackdamage << " points of damage!" << std::endl;
     energypoint--;
-    std::cout << "energie point of atack " << energypoint << std::endl;
 }
 
 void    ClapTrap::takeDamage(unsigned int amount)
@@ -76,12 +75,10 @@ void    ClapTrap::beRepaired(unsigned int amount)
     }
     std::cout << "ClapTrap" << name << ", repaired whith " << amount << " points" << std::endl;
     hitpoint = +amount;
-    std::cout << "hit point of beRepaired " << hitpoint << std::endl;
-    energypoint--; 
-    std::cout << "energie point of beRepaired " << energypoint << std::endl;
+    energypoint--;
 }
 
 ClapTrap::~ClapTrap()
 { 
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor called of ClapTrap" << std::endl;
 }

@@ -6,11 +6,11 @@
 #    By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 10:55:45 by bbrahim           #+#    #+#              #
-#    Updated: 2022/09/22 16:12:39 by bbrahim          ###   ########.fr        #
+#    Updated: 2022/09/22 16:51:39 by bbrahim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = serena
 
 CXX = c++
 
