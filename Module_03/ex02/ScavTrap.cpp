@@ -1,0 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/22 16:26:02 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/22 18:17:06 by bbrahim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap()
+{
+	std::cout << "Default Constructor called of ScavTrap" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &copy)
+{
+	(void) copy;
+	std::cout << "Copy Constructor called of ScavTrap" << std::endl;
+}
+
+ScavTrap & ScavTrap::operator=(const ScavTrap &assign)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	(void) assign;
+	return *this;
+}
+
+void	ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
+}
+
+ScavTrap::~ScavTrap()
+{
+	std::cout << "Destructor called of ScavTrap" << std::endl;
+}

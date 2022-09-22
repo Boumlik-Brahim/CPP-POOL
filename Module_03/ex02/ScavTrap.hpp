@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 18:22:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 18:28:40 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/22 16:26:19 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/22 18:16:33 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_H
-# define FRAGTRAP_H
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
+#include"ClapTrap.hpp"
 # include <iostream>
 # include <string>
-#include"ClapTrap.hpp"
-class FragTrap : public ClapTrap
+
+class ScavTrap : public ClapTrap
 {
 	private:
 	
 	public:
-		FragTrap();
-		FragTrap(const FragTrap &copy);
-		
-		FragTrap & operator = (const FragTrap &assign);
-		
-		void	highFivesGuys(void);
-		~FragTrap();
+		ScavTrap();
+		ScavTrap(const ScavTrap &copy);
+
+		ScavTrap & operator=(const ScavTrap &assign);
+
+		void	guardGate();
+		~ScavTrap();	
 };
 
 #endif
