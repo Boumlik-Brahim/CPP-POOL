@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:56 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 15:56:42 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/23 16:20:23 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int main()
 {
-    ClapTrap a;
+    ClapTrap a("hamid");
+    ClapTrap b("larbi");
     
-    a.attack("hamid");
-    a.takeDamage(5);
-    a.beRepaired(5);
+    a.attack(b.getname());
+    b.takeDamage(a.gethitpoint());
+    a.beRepaired(5); 
     
     return 0;
 }
