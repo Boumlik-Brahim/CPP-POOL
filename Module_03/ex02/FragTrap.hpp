@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:22:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 18:28:40 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/24 10:47:15 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ class FragTrap : public ClapTrap
 	
 	public:
 		FragTrap();
-		FragTrap(const FragTrap &copy);
+		FragTrap( const FragTrap &copy );
+		FragTrap( std::string name );
 		
-		FragTrap & operator = (const FragTrap &assign);
+		FragTrap & operator = ( const FragTrap &assign );
 		
-		void	highFivesGuys(void);
+		void	highFivesGuys( void );
 		~FragTrap();
 };
 

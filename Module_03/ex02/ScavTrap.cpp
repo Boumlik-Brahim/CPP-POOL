@@ -6,14 +6,17 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:26:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/23 16:56:41 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/24 11:09:53 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap()
+ScavTrap::ScavTrap()
 {
+	hitpoint = 100;
+	energypoint = 50;
+	attackdamage = 20;
 	std::cout << "Default Constructor called of ScavTrap" << std::endl;
 }
 
@@ -27,7 +30,6 @@ ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 ScavTrap & ScavTrap::operator = (const ScavTrap &assign)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	(void) assign;
 	return *this;
 }
 

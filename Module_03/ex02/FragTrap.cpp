@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:22:57 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 18:29:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/24 11:09:57 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 FragTrap::FragTrap()
 {
+	hitpoint = 100;
+	energypoint = 100;
+	attackdamage = 30;
 	std::cout << "Default Constructor called of FragTrap" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy)
+FragTrap::FragTrap( std::string name ): ClapTrap(name) {}
+
+FragTrap::FragTrap( const FragTrap &copy ): ClapTrap(copy)
 {
-	(void) copy;
 	std::cout << "Copy Constructor called of FragTrap" << std::endl;
 }
 
-FragTrap & FragTrap::operator=(const FragTrap &assign)
+FragTrap & FragTrap::operator = (const FragTrap &assign)
 {
-	(void) assign;
 	return *this;
 }
 
