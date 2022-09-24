@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:22:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/24 10:47:15 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/24 16:48:54 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <iostream>
 # include <string>
 #include"ClapTrap.hpp"
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	private:
-	
+
 	public:
 		FragTrap();
 		FragTrap( const FragTrap &copy );

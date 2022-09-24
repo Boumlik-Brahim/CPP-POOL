@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:56 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/22 18:42:11 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/24 17:19:34 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,34 @@
 
 int main()
 {
-    ClapTrap    a;
-    ScavTrap    b;
-    FragTrap    c;
+    ClapTrap    a("hamid");
+    ScavTrap    b("mhamed");
+    FragTrap    c("hmouda");
     
-    
-    a.attack("hamid");
+    std::cout << "ClapTrap name is: |" << a.getname() << "| ClapTrap hitpoint is: |" << a.gethitpoint() 
+    << "| ClapTrap energypoint is: |" << a.getenergypoint() << "| ClapTrap atackdamage is: |" << a.getattackdamage() << "|"
+    << std::endl;
+
+    a.attack(b.getname());
     a.takeDamage(5);
     a.beRepaired(5);
     
-    b.attack("brahim");
-    b.takeDamage(3);
-    b.beRepaired(3);
-    b.guardGate();
+    std::cout << "ScavTrap name is: |" << b.getname() << "| ScavTrap hitpoint is: |" << b.gethitpoint() 
+    << "| ScavTrap energypoint is: |" << b.getenergypoint() << "| ScavTrap atackdamage is: |" << b.getattackdamage() << "|"
+    << std::endl;
 
-    c.attack("boumlik");
-    c.takeDamage(2);
-    c.beRepaired(2);
+    b.attack(a.getname());
+    b.takeDamage(5);
+    b.beRepaired(5);
+    b.guardGate();
+    
+    std::cout << "FragTrap name is: |" << c.getname() << "| FragTrap hitpoint is: |" << c.gethitpoint() 
+    << "| FragTrap energypoint is: |" << c.getenergypoint() << "| FragTrap atackdamage is: |" << c.getattackdamage() << "|"
+    << std::endl;
+    
+    c.attack(a.getname());
+    c.takeDamage(5);
+    c.beRepaired(5);
     c.highFivesGuys();
     
     return 0;
