@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:26:02 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/24 16:40:54 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/25 11:35:02 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap( std::string name ): ClapTrap(name)
 {
 	std::cout << "parametrized Constructor called of ScavTrap" << std::endl;
-	this->name = name;
 	this->hitpoint = 100;
 	this->energypoint = 50;
 	this->attackdamage = 20;

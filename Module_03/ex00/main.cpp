@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 10:55:56 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/24 14:44:17 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/25 10:01:59 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
     
     a.attack("mhamed");
     a.takeDamage(5);
-    a.beRepaired(5); 
+    a.beRepaired(2); 
     
     std::cout << "ClapTrap name is: |" << a.getname() << "| ClapTrap hitpoint is: |" << a.gethitpoint() 
     << "| ClapTrap energypoint is: |" << a.getenergypoint() << "| ClapTrap atackdamage is: |" << a.getattackdamage() << "|"
