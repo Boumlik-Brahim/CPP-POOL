@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 16:26:19 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/24 16:48:49 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:16:24 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iostream>
 # include <string>
 
-class ScavTrap : virtual public ClapTrap
+class ScavTrap : public ClapTrap
 {
 	private:
 	

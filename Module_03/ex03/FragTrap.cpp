@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 18:22:57 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/24 17:22:53 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/25 14:24:09 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ FragTrap::FragTrap()
 FragTrap::FragTrap( std::string name ): ClapTrap(name)
 {
 	std::cout << "parametrized Constructor called of FragTrap" << std::endl;
-	this->name = name;
 	hitpoint = 100;
 	energypoint = 100;
 	attackdamage = 30;
