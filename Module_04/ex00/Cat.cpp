@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:58:01 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/25 18:08:14 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:23:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ Cat & Cat::operator = (const Cat &assign)
 {
 	(void) assign;
 	return *this;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "meeeeeeeeeeeeeeeewwwwwwww" << std::endl;
 }
 
 Cat::~Cat()

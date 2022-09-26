@@ -6,17 +6,18 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:17:51 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 11:20:20 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:29:21 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
+# include "WrongAnimal.hpp"
 # include <iostream>
 # include <string>
 
-class WrongCat
+class WrongCat : public WrongAnimal
 {
 	private:
 	
@@ -26,6 +27,8 @@ class WrongCat
 		
 		WrongCat & operator = (const WrongCat &assign);
 		
+		void	makeSound() const;
+
 		~WrongCat();	
 };
 

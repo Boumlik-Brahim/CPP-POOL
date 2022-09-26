@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:52 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/25 18:10:21 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:23:17 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(const Cat &copy);
-		
+
 		Cat & operator = (const Cat &assign);
+
+		void	makeSound() const;
 		
 		~Cat();		
 };

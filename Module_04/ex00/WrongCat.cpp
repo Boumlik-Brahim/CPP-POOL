@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:17:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 11:20:52 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:30:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ WrongCat & WrongCat::operator=(const WrongCat &assign)
 {
 	(void) assign;
 	return *this;
+}
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "Wrong Cat meeeeeeeeeeeeeeeewwwwwwww" << std::endl;
 }
 
 WrongCat::~WrongCat()

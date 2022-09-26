@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:02:06 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/25 18:08:08 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:23:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ Dog & Dog::operator = (const Dog &assign)
 {
 	(void) assign;
 	return *this;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "haaaaaw haaaaaaw haaaaw" << std::endl;
 }
 
 Dog::~Dog()

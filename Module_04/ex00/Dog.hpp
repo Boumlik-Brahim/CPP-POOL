@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:01:47 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/25 18:10:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/26 17:23:38 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Dog : public Animal
 		Dog(const Dog &copy);
 
 		Dog & operator = (const Dog &assign);
+
+		void	makeSound() const;
 
 		~Dog();		
 };
