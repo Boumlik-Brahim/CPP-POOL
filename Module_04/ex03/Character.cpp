@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 15:07:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 18:21:40 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 17:39:19 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 17:39:52 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "Character.hpp"
 
-Ice::Ice()
+Character::Character()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Ice\e[0m" << std::endl;
+	std::cout << "\e[0;33mDefault Constructor called of Character\e[0m" << std::endl;
 }
 
-Ice::Ice(const Ice &copy)
+Character::Character(const Character &copy)
 {
 	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Ice\e[0m" << std::endl;
+	std::cout << "\e[0;33mCopy Constructor called of Character\e[0m" << std::endl;
 }
 
-Ice & Ice::operator=(const Ice &assign)
+Character & Character::operator=(const Character &assign)
 {
 	(void) assign;
 	return *this;
 }
 
-AMateria* Ice::clone() const
+Character::~Character()
 {
+	std::cout << "\e[0;31mDestructor called of Character\e[0m" << std::endl;
 }
 
-void Ice::use(ICharacter& target)
-{
-}
-
-void Ice::settype(std::string type)
-{
-	this->type = type;
-}
-
-Ice::~Ice()
-{
-	std::cout << "\e[0;31mDestructor called of Ice\e[0m" << std::endl;
-}

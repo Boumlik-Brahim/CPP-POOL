@@ -6,13 +6,15 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:02:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 15:12:11 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:52:56 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "AMateria.hpp"
 # include "Ice.hpp"
 # include "Cure.hpp"
+# include "Character.hpp"
+# include "MateriaSource.hpp"
 
 int main()
 {

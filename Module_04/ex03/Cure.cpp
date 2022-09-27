@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:07:51 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 15:10:42 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/27 18:21:58 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,20 @@ Cure & Cure::operator=(const Cure &assign)
 {
 	(void) assign;
 	return *this;
+}
+
+AMateria* Cure::clone() const
+{
+}
+
+void Cure::use(ICharacter& target)
+{
+
+}
+
+void Cure::settype(std::string type)
+{
+	this->type = type;
 }
 
 Cure::~Cure()
