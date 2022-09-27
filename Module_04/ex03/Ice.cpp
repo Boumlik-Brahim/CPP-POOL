@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:07:23 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:07:34 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:09:42 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Ice.hpp"
 
-Animal::Animal()
+Ice::Ice()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mDefault Constructor called of Ice\e[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+Ice::Ice(const Ice &copy)
 {
 	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mCopy Constructor called of Ice\e[0m" << std::endl;
 }
 
-Animal & Animal::operator = (const Animal &assign)
+Ice & Ice::operator=(const Ice &assign)
 {
 	(void) assign;
 	return *this;
 }
 
-void	Animal::makeSound() const {}
-
-std::string Animal::getType() const
+Ice::~Ice()
 {
-	return(type);	
+	std::cout << "\e[0;31mDestructor called of Ice\e[0m" << std::endl;
 }
 
-Animal::~Animal()
-{
-	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
-}

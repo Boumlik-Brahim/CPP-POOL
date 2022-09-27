@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:07:23 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:07:18 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:11:08 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-Animal::Animal()
+AMateria::AMateria()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mDefault Constructor called of AMateria\e[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+AMateria::AMateria(const AMateria &copy)
 {
 	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mCopy Constructor called of AMateria\e[0m" << std::endl;
 }
 
-Animal & Animal::operator = (const Animal &assign)
+AMateria & AMateria::operator=(const AMateria &assign)
 {
 	(void) assign;
 	return *this;
 }
 
-void	Animal::makeSound() const {}
-
-std::string Animal::getType() const
+AMateria::~AMateria()
 {
-	return(type);	
-}
-
-Animal::~Animal()
-{
-	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;31mDestructor called of AMateria\e[0m" << std::endl;
 }

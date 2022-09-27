@@ -5,25 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 18:11:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 14:55:34 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:02:05 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:12:11 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
-# include "Cat.hpp"
-# include "Dog.hpp"
-# include "WrongAnimal.hpp"
-# include "WrongCat.hpp"
+# include "AMateria.hpp"
+# include "Ice.hpp"
+# include "Cure.hpp"
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    
-    delete j;//should not create a leak
-    delete i;
+    IMateriaSource* src = new MateriaSource();
 
-    system("leaks abstract");
+    src->learnMateria(new Ice());
+    src->learnMateria(new Cure());
+
+    ICharacter* me = new Character("me");
+    
+    AMateria* tmp;
+    tmp = src->createMateria("ice");
+    
+    me->equip(tmp);
+    
+    tmp = src->createMateria("cure");
+    
+    me->equip(tmp);
+    
+    ICharacter* bob = new Character("bob");
+    
+    me->use(0, *bob);
+    me->use(1, *bob);
+
+    delete bob;
+    delete me;
+    delete src;
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:30 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:13:13 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:52:20 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Animal
 		
 		std::string getType() const;
 
-		~Animal();
+		virtual ~Animal();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:22:51 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/27 11:18:02 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ Animal::Animal(const Animal &copy)
 
 Animal & Animal::operator = (const Animal &assign)
 {
-	(void) assign;
+	if (this != &assign)
+	{
+		this->type = assign.type;
+	}
 	return *this;
 }
 
@@ -36,7 +39,7 @@ void	Animal::makeSound() const
 
 std::string Animal::getType() const
 {
-	return(type);	
+	return(type);
 }
 
 Animal::~Animal()

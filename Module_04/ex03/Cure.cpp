@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:07:23 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:07:51 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:10:42 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cure.hpp"
 
-Animal::Animal()
+Cure::Cure()
 {
-	std::cout << "\e[0;33mDefault Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mDefault Constructor called of Cure\e[0m" << std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+Cure::Cure(const Cure &copy)
 {
 	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;33mCopy Constructor called of Cure\e[0m" << std::endl;
 }
 
-Animal & Animal::operator = (const Animal &assign)
+Cure & Cure::operator=(const Cure &assign)
 {
 	(void) assign;
 	return *this;
 }
 
-void	Animal::makeSound() const {}
-
-std::string Animal::getType() const
+Cure::~Cure()
 {
-	return(type);	
-}
-
-Animal::~Animal()
-{
-	std::cout << "\e[0;31mDestructor called of Animal\e[0m" << std::endl;
+	std::cout << "\e[0;31mDestructor called of Cure\e[0m" << std::endl;
 }

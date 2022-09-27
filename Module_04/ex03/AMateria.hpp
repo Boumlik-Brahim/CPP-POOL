@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 17:57:30 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 14:49:17 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:07:09 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:14:03 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 # include <iostream>
 # include <string>
 
-class Animal
+class AMateria
 {
 	protected:
-		std::string	type;
+		std::string type;
 	public:
-		Animal();
-		Animal(const Animal &copy);
-
-		Animal & operator = (const Animal &assign);
-
-		virtual void	makeSound() const = 0;
+		AMateria();
+		AMateria(std::string const & type);
+		AMateria(const AMateria &copy);
 		
-		std::string getType() const;
+		AMateria & operator=(const AMateria &assign);
 
-		virtual ~Animal();
+		std::string const & getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
+		~AMateria();	
 };
 
 #endif

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 17:45:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:18:22 by bbrahim          ###   ########.fr       */
+/*   Created: 2022/09/27 15:07:26 by bbrahim           #+#    #+#             */
+/*   Updated: 2022/09/27 15:09:21 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-Brain::Brain()
+# include <iostream>
+# include <string>
+
+class Ice
 {
-	std::cout << "\e[0;33mDefault Constructor called of Brain\e[0m" << std::endl;
-}
+	private:
 
-Brain::Brain(const Brain &copy)
-{
-	(void) copy;
-	std::cout << "\e[0;33mCopy Constructor called of Brain\e[0m" << std::endl;
-}
+	public:
+		Ice();
+		Ice(const Ice &copy);
 
-Brain & Brain::operator=(const Brain &assign)
-{
-	return *this;
-}
+		Ice & operator=(const Ice &assign);
 
-Brain::~Brain()
-{
-	std::cout << "\e[0;31mDestructor called of Brain\e[0m" << std::endl;
-}
+		~Ice();		
+};
 
+#endif

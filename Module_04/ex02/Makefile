@@ -6,11 +6,11 @@
 #    By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/25 15:29:15 by bbrahim           #+#    #+#              #
-#    Updated: 2022/09/26 17:58:19 by bbrahim          ###   ########.fr        #
+#    Updated: 2022/09/27 14:54:51 by bbrahim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = onfire
+NAME = abstract
 
 CXX = c++
 

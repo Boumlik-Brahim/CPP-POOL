@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:02:06 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:52:09 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/27 14:44:14 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 Dog::Dog()
 {
 	std::cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << std::endl;
-	Dogbrain = new(std::nothrow) Brain();
+	this->type = "Dog";
+	this->Dogbrain = new(std::nothrow) Brain();
 }
 
 Dog::Dog(const Dog &copy)
@@ -26,7 +27,14 @@ Dog::Dog(const Dog &copy)
 
 Dog & Dog::operator = (const Dog &assign)
 {
-	(void) assign;
+	if (this != &assign)
+	{
+		this->type = assign.type;
+		if(this->Dogbrain)
+			delete this->Dogbrain;
+		this->Dogbrain = new(std::nothrow) Brain();	
+		this->Dogbrain = assign.Dogbrain;
+	}
 	return *this;
 }
 
@@ -38,5 +46,5 @@ void	Dog::makeSound() const
 Dog::~Dog()
 {
 	std::cout << "\e[0;31mDestructor called of Dog\e[0m" << std::endl;
-	delete Dogbrain;
+	delete this->Dogbrain;
 }
