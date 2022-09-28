@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:07:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/28 10:47:50 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 17:36:51 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ AMateria* Ice::clone() const
 {
 	Ice *instance;
 	instance = new(std::nothrow) Ice;
+	if(!instance)
+		return(NULL);
 	return(instance);
 }
 

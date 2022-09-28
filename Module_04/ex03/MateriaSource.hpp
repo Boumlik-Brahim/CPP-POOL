@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:56:29 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 18:38:53 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 14:08:11 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-
+		AMateria	*materias[4];
+		int			nmbrofmaterias;
 	public:
 		MateriaSource();
 		MateriaSource(const MateriaSource &copy);

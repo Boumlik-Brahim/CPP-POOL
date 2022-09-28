@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:07:51 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/28 10:49:05 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 17:36:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ AMateria* Cure::clone() const
 {
 	Cure *instance;
 	instance = new(std::nothrow) Cure;
+	if(!instance)
+		return(NULL);
 	return(instance);
 }
 

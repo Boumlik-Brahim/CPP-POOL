@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:02:05 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/28 11:30:40 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 17:58:07 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
     ICharacter* bob = new Character("bob");
 
     me->use(0, *bob);
-    me->use(1, *bob);
+    // me->use(1, *bob);
 
     delete bob;
     delete me;
