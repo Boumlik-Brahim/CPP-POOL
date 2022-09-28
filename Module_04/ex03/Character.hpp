@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:39:10 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 18:35:05 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 11:16:53 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@
 class Character : public ICharacter 
 {
 	private:
-		std::string name;
-		AMateria * inventory[4];
+		std::string	name;
+		AMateria*	inventory[4];
+		int			nmbrofinventory;
 	public:
 		Character();
+		Character( std::string name );
 		Character(const Character &copy);
 
 		Character & operator=(const Character &assign);

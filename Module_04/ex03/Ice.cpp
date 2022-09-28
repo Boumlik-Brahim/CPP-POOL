@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:07:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 18:21:40 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 10:47:50 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,14 @@ Ice & Ice::operator=(const Ice &assign)
 
 AMateria* Ice::clone() const
 {
+	Ice *instance;
+	instance = new(std::nothrow) Ice;
+	return(instance);
 }
 
 void Ice::use(ICharacter& target)
 {
+	std::cout << "* shoots an ice bolt at" << target.getName() << "*" << std::endl;
 }
 
 void Ice::settype(std::string type)

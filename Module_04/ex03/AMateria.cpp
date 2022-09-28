@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:07:18 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 17:33:19 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 10:40:59 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,9 @@ std::string const & AMateria::getType() const
 	return(this->type);
 }
 
-AMateria* AMateria::clone() const {};
+AMateria* AMateria::clone() const {}
 
-void AMateria::use(ICharacter& target)
-{
-
-}
+void AMateria::use(ICharacter& target){}
 
 AMateria::~AMateria()
 {
