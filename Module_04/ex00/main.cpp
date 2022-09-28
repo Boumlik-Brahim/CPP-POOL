@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:11:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:42:30 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:07:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int main()
     
     delete metawrong;
     delete iwrong;
+
+    system("leaks Polymorphism");
 
     return 0;
 }

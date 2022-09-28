@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:18:02 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:43:28 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ void	Animal::makeSound() const
 std::string Animal::getType() const
 {
 	return(type);
+}
+
+void Animal::setType( std::string type )
+{
+	this->type = type;
 }
 
 Animal::~Animal()

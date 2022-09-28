@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:17:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:30:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:41:08 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 WrongCat::WrongCat()
 {
 	std::cout << "\e[0;33mDefault Constructor called of WrongCat\e[0m" << std::endl;
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat &copy)

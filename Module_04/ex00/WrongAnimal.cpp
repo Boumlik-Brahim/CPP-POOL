@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:17:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:28:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:40:09 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ void	WrongAnimal::makeSound() const
 std::string WrongAnimal::getType() const
 {
 	return(type);
+}
+
+void WrongAnimal::setType( std::string type )
+{
+	this->type = type;
 }
 
 WrongAnimal::~WrongAnimal()

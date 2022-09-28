@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:02:06 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:23:43 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:37:05 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog()
 {
 	std::cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << std::endl;
+	this->type = "Dog";
 }
 
 Dog::Dog(const Dog &copy)

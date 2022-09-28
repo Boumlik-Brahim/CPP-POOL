@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:30 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/26 17:13:13 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/28 18:35:01 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Animal
 		virtual void	makeSound() const;
 		
 		std::string getType() const;
+		void setType( std::string type );
 
 		~Animal();
 };
