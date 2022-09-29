@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 18:11:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 14:44:58 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/29 10:01:34 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    // const Animal* j = new Dog();
+    // const Animal* i = new Cat();
     Animal *animaltab[4];
 
     int k = -1;
@@ -43,8 +43,8 @@ int main()
     k = -1;
     while (++k < 4)
         delete animaltab[k];
-    delete j;//should not create a leak
-    delete i;
+    // delete j;//should not create a leak
+    // delete i;
 
     system("leaks onfire");
     return 0;

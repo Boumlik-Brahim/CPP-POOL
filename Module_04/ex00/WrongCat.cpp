@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:17:59 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/28 18:41:08 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/29 09:32:26 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@ WrongCat::WrongCat()
 
 WrongCat::WrongCat(const WrongCat &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of WrongCat\e[0m" << std::endl;
+	this->type = copy.type;
 }
 
 WrongCat & WrongCat::operator=(const WrongCat &assign)
 {
-	(void) assign;
+	if (this != &assign)
+		this->type = assign.type;
 	return *this;
 }
 

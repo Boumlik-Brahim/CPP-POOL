@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:58:01 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 14:44:09 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/29 09:55:30 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ Cat::Cat()
 
 Cat::Cat(const Cat &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
+	this->type =  copy.type;
+	this->catbrain = new(std::nothrow) Brain();
+	*(this->catbrain) = *(copy.catbrain);
 }
 
 Cat & Cat::operator = (const Cat &assign)

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/27 11:07:23 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/29 10:10:50 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ Animal::Animal()
 
 Animal::Animal(const Animal &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of Animal\e[0m" << std::endl;
+	this->type = copy.type;
 }
 
 Animal & Animal::operator = (const Animal &assign)
 {
-	(void) assign;
+	if (this != &assign)
+		this->type = assign.type;
 	return *this;
 }
 
@@ -33,7 +34,7 @@ void	Animal::makeSound() const {}
 
 std::string Animal::getType() const
 {
-	return(type);	
+	return(type);
 }
 
 Animal::~Animal()
