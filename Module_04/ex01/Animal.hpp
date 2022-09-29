@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:57:30 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/28 18:43:02 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/29 14:28:34 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal
 		Animal & operator = (const Animal &assign);
 
 		virtual void	makeSound() const;
-		
+
 		std::string getType() const;
 		void setType( std::string type );
 
