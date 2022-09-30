@@ -6,15 +6,15 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/30 15:28:23 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:20:34 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-
     // try
     // {
     //     Bureaucrat obj(0, "bureaucrat");

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/30 16:30:44 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:10:08 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ const char * Bureaucrat::GradeTooLowException::what() const throw()
 	return("GradeTooLowException");
 }
 
-void Bureaucrat::signForm(Form f)
+void Bureaucrat::signForm(Form &f)
 {
 	if(f.getSignd() != 0)
 	{

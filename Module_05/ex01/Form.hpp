@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:34:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/30 16:34:56 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/09/30 17:24:38 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,37 @@
 # include <iostream>
 # include <string>
 
+class Bureaucrat;
 class Form
 {
 	private:
-		std::string name;
-		bool		signd;
-		int			gradesigned;
-		int			gradexecute;
+		bool				signd;
+		const std::string 	name;
+		const int			gradesigned;
+		const int			gradexecute;
 	public:
 		Form();
-		Form(const Form &copy);
+		// Form(const Form &copy);
+		Form & operator=(const Form &assign);
 
-		std::string getName() const;
 		bool getSignd() const;
+		const std::string getName() const;
 		const int getGradesigned() const;
 		const int getGradexecute() const;
 
-		void beSigned(Bureaucrat obj);
+		void beSigned(Bureaucrat &obj);
 
-		Form & operator=(const Form &assign);
+		class GradeTooHighException: public std::exception
+		{
+			public:
+				virtual const char * what() const throw();
+		};
+		
+		class GradeTooLowException: public std::exception
+		{
+			public:
+				virtual const char * what() const throw();
+		};
 
 		~Form();		
 };
