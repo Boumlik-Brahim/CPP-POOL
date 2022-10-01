@@ -6,17 +6,18 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:55 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 11:56:28 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:13:53 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
+# include "Form.hpp"
 # include <iostream>
 # include <string>
 
-class PresidentialPardonForm
+class PresidentialPardonForm : public Form
 {
 	private:
 		std::string target;
@@ -26,6 +27,8 @@ class PresidentialPardonForm
 		PresidentialPardonForm(const PresidentialPardonForm &copy);
 
 		PresidentialPardonForm & operator=(const PresidentialPardonForm &assign);
+
+		void execute(Bureaucrat const & executor) const;
 
 		~PresidentialPardonForm();		
 };

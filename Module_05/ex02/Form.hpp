@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:34:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 09:43:26 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:10:43 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ class Form
 		const int			getGradexecute() const;
 
 		void beSigned(Bureaucrat &obj);
+
+		virtual void execute(Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException: public std::exception
 		{

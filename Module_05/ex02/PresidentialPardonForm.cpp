@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:02:03 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 11:27:29 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:26:10 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPar
 {
 	(void) assign;
 	return *this;
+}
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:35:17 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 10:53:12 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:10:29 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ void Form::beSigned(Bureaucrat &obj)
 		throw (Form::GradeTooLowException());
 	}
 }
+
+void Form::execute(Bureaucrat const & executor) const {}
 
 const char * Form::GradeTooHighException::what() const throw()
 {

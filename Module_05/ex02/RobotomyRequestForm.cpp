@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 12:00:27 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 12:03:20 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:26:31 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ RobotomyRequestForm & RobotomyRequestForm::operator = (const RobotomyRequestForm
 {
 	(void) assign;
 	return *this;
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+	
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()

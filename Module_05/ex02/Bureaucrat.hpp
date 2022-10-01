@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:33 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 11:35:29 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:47:29 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat
 
 		void signForm(Form &f);
 
-		void executeForm(Form const & form);
+		void executeForm(Form const & form) const;
 
 		class GradeTooHighException: public std::exception
 		{

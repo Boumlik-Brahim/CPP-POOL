@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:26 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 11:57:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 14:48:37 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,18 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 {
 	(void) assign;
 	return *this;
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+	if(this->getSignd() != 0 && executor.getGrade() < 150)
+	{
+		executor.executeForm();
+	}
+	else
+	{
+		throw (Bureaucrat::GradeTooLowException());
+	}
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
