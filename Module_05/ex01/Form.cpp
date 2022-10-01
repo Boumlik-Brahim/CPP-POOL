@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:35:17 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/30 17:24:33 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 10:21:08 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,27 @@ Form::Form(): signd(0), gradesigned(0), gradexecute(0)
 	std::cout << "\e[0;33mDefault Constructor called of Form\e[0m" << std::endl;
 }
 
-// Form::Form(const Form &copy)
+Form::Form(const std::string name, const int gradesigned, const int gradexecute, bool	signd) : name(name), gradesigned(gradesigned), gradexecute(gradexecute), signd(signd)
+{
+	std::cout << "\e[0;33mParametrized Constructor called of Form\e[0m" << std::endl;
+}
+
+// Form::Form(const Form &copy): name(copy.name), gradesigned(copy.gradesigned), gradexecute(copy.gradexecute), signd(copy.signd) 
 // {
-// 	(void) copy;
 // 	std::cout << "\e[0;33mCopy Constructor called of Form\e[0m" << std::endl;
 // }
 
-Form & Form::operator=(const Form &assign)
-{
-	(void) assign;
-	return *this;
-}
+// Form & Form::operator = (const Form &assign)
+// {
+// 	if(this != &assign)
+// 	{
+// 		this->name = assign.name;
+// 		this->gradesigned = assign.gradesigned;
+// 		this->gradexecute = assign.gradexecute;
+// 		this->signd = assign.signd;
+// 	}
+// 	return *this;
+// }
 
 bool Form::getSignd() const
 {
@@ -73,7 +83,7 @@ const char * Form::GradeTooLowException::what() const throw()
 
 std::ostream& operator << (std::ostream &outobj, const Form &obj)
 {
-	outobj << obj.getName() ;
+	outobj << obj.getName() << ", Form grade " << obj.getGradexecute();
     return(outobj);
 }
 
