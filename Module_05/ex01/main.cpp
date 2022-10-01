@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 10:30:16 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 10:53:41 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,20 +57,25 @@ int main()
     // std::cout << obj1 << std::endl;
 
     /*---------------------------------------------------------------ex01---------------------------------------------------*/
+    
+    Form obj("form1", 0, 0, 0);
+    Bureaucrat bureu;
     try
     {
-        Form obj("form1", 0, 0, 0);
-        Bureaucrat bureu(0, "bureaucrat");
+        bureu.setGrade(0);
+        bureu.setGrade(150);
+        // bureu.setGrade(151);
         obj.beSigned(bureu);
         std::cout << obj.getSignd() << std::endl; 
-        /* do some stuff with bureaucrats */
+        bureu.signForm(obj);
     }
     catch (std::exception & e)
     {
         std::cerr << e.what() << std::endl;
-        /* handle exception */
     }
 
+    std::cout << obj << std::endl;
+    std::cout << bureu << std::endl;
 
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/09/30 17:10:08 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 10:40:13 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat(int grade, std::string name)
 	this->grade = grade;
 	if (this->grade < 1)
 	{
-		throw (Bureaucrat::GradeTooLowException());
+		throw (Bureaucrat::GradeTooHighException());
 	}
 	else if ( this->grade > 150)
 	{
