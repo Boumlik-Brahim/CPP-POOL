@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:35:17 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:10:29 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 15:39:33 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,6 @@ Form::Form(const std::string name, const int gradesigned, const int gradexecute,
 {
 	std::cout << "\e[0;33mParametrized Constructor called of Form\e[0m" << std::endl;
 }
-
-// Form::Form(const Form &copy): name(copy.name), gradesigned(copy.gradesigned), gradexecute(copy.gradexecute), signd(copy.signd) 
-// {
-// 	std::cout << "\e[0;33mCopy Constructor called of Form\e[0m" << std::endl;
-// }
-
-// Form & Form::operator = (const Form &assign)
-// {
-// 	if(this != &assign)
-// 	{
-// 		this->name = assign.name;
-// 		this->gradesigned = assign.gradesigned;
-// 		this->gradexecute = assign.gradexecute;
-// 		this->signd = assign.signd;
-// 	}
-// 	return *this;
-// }
 
 bool Form::getSignd() const
 {

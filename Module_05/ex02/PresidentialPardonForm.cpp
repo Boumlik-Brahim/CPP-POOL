@@ -6,15 +6,21 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:02:03 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:26:10 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 16:29:06 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm()
+PresidentialPardonForm::PresidentialPardonForm(): Form("Presidential", 25, 5, 0)
 {
 	std::cout << "\e[0;33mDefault Constructor called of PresidentialPardonForm\e[0m" << std::endl;
+}
+
+PresidentialPardonForm::PresidentialPardonForm( std::string	target ): Form("Presidential", 25, 5, 0)
+{
+	std::cout << "\e[0;33mParametrized Constructor called of PresidentialPardonForm\e[0m" << std::endl;
+	this->target = target;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy)
@@ -31,7 +37,14 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPar
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-
+	if(this->getSignd() != 0 && executor.getGrade() < 150)
+	{
+		std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
+	}
+	else
+	{
+		throw (Bureaucrat::GradeTooLowException());
+	}
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()

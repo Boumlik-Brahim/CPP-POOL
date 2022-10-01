@@ -6,19 +6,20 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:26 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:48:37 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 18:45:32 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm()
+ShrubberyCreationForm::ShrubberyCreationForm(): Form("Shrubbery", 145, 137, 0)
 {
 	std::cout << "\e[0;33mDefault Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm( std::string target )
+ShrubberyCreationForm::ShrubberyCreationForm( std::string target ): Form("Shrubbery", 145, 137, 0)
 {
+	std::cout << "\e[0;33mParmetrized Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
 	this->target = target;
 }
 
@@ -36,9 +37,29 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
+
 	if(this->getSignd() != 0 && executor.getGrade() < 150)
 	{
-		executor.executeForm();
+		std::string	isciitree = " _-_ \n"
+    						  "/~~   ~~\\ \n"
+ 						   "/~~         ~~\\ \n"
+						  "{               } \n"
+ 						  "\\  _-     -_  / \n"
+   							 "~  \\ //  ~ \n"
+						  "_- -   | | _- _ \n"
+  							"_ -  | |   -_ \n"
+      							"// \\ \n";
+		
+		std::cout << this->target << " executed" << std::endl;
+		std::string 	filename = this->target;
+		filename += "_shrubbery";
+		std::ofstream	out_file(filename);
+		if (!out_file)
+		{
+			std::cout << "file creation failed" << std::endl;
+			exit(1);
+		}
+		out_file << isciitree;
 	}
 	else
 	{

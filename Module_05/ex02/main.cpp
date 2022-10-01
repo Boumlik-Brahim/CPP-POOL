@@ -6,12 +6,15 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:08:05 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 18:50:10 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+# include "Bureaucrat.hpp"
+# include "Form.hpp"
+# include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
 
 int main()
 {
@@ -77,5 +80,9 @@ int main()
     // std::cout << obj << std::endl;
     // std::cout << bureu << std::endl;
 
+    /*---------------------------------------------------------------ex01---------------------------------------------------*/
+
+    Bureaucrat bureau;
+    
     return 0;
 }

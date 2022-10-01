@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:34:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:10:43 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 15:39:38 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ class Form
 	public:
 		Form();
 		Form(const std::string name, const int gradesigned, const int gradexecute, bool	signd);
-		// Form(const Form &copy);
-
-		// Form & operator = (const Form &assign);
 
 		const std::string	getName() const;
 		bool				getSignd() const;

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:47:16 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/01 15:50:18 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void Bureaucrat::signForm(Form &f)
 
 void Bureaucrat::executeForm(Form const & form) const
 {
-
+	std::cout << this->name << " executed " << form.getName() << std::endl;
 }
 
 std::ostream& operator << (std::ostream &outobj, const Bureaucrat &obj)
