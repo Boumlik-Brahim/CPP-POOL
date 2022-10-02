@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 11:02:24 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 11:12:10 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include "ShrubberyCreationForm.hpp"
 # include "RobotomyRequestForm.hpp"
 # include "PresidentialPardonForm.hpp"
+# include "Intern.hpp"
 
 int main()
 {
@@ -45,16 +46,20 @@ int main()
     //     std::cerr << e.what() << std::endl;
     // }
 
-    try
-    {
-        std::cout << "name: " << presidential.getName() << "sign: " << presidential.getGradesigned() << " exec: " << presidential.getGradexecute() << " signd: " << presidential.getSignd() << std::endl;
-        presidential.execute(bureau);
-        bureau.executeForm(presidential);
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    // try
+    // {
+    //     std::cout << "name: " << presidential.getName() << "sign: " << presidential.getGradesigned() << " exec: " << presidential.getGradexecute() << " signd: " << presidential.getSignd() << std::endl;
+    //     presidential.execute(bureau);
+    //     bureau.executeForm(presidential);
+    // }
+    // catch (std::exception & e)
+    // {
+    //     std::cerr << e.what() << std::endl;
+    // }
+
+    Intern someRandomIntern;
+    Form* rrf;
+    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 
     return 0;
 }
