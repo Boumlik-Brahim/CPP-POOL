@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:33 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 10:43:06 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 14:18:45 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Form;
 class Bureaucrat
 {
 	private:
-		std::string	name;
+		const std::string	name;
 		int			grade;
 	public:
 		Bureaucrat();
@@ -31,7 +31,6 @@ class Bureaucrat
 		int					getGrade() const;
 		
 		void	setGrade(int grade);
-		void	setName(std::string name);
 
 		void incrimentgrad( void );
 		void decrimentgrad( void );

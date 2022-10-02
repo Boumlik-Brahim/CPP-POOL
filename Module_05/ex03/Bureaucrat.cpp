@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 10:56:51 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 14:18:38 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ Bureaucrat::Bureaucrat(): grade(1), name("Bureaucrat")
 	std::cout << "\e[0;33mDefault Constructor called of Bureaucrat\e[0m" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(int grade, std::string name)
+Bureaucrat::Bureaucrat(int grade, std::string name): name(name), grade(grade)
 {
 	std::cout << "\e[0;33mParametrized Constructor called of Bureaucrat\e[0m" << std::endl;
-	this->name = name;
-	this->grade = grade;
 	if (this->grade < 1)
 	{
 		throw (Bureaucrat::GradeTooHighException());
@@ -45,11 +43,6 @@ int Bureaucrat::getGrade() const
 void Bureaucrat::setGrade(int grade)
 {
 	this->grade = grade;
-}
-
-void  Bureaucrat::setName(std::string name)
-{
-	this->name = name;
 }
 
 void Bureaucrat::incrimentgrad( void )

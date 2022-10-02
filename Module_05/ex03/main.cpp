@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 11:12:10 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 15:15:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 int main()
 {
-    Bureaucrat bureau;
+    // Bureaucrat bureau;
     // ShrubberyCreationForm shrub("home");
     // RobotomyRequestForm robotomy("home");
-    PresidentialPardonForm presidential("home");
+    // PresidentialPardonForm presidential("home");
 
     // try
     // {
