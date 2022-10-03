@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 12:00:27 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 10:44:59 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 17:20:57 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	{
 		throw (Bureaucrat::FormisnotsignedException());
 	}
-	else if( executor.getGrade() > 150)
+	else if( executor.getGrade() <= this->getGradexecute())
 	{
 		throw (Bureaucrat::GradeTooLowException());
 	}

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:34:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 15:46:20 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/02 17:37:33 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Form
 			public:
 				virtual const char * what() const throw();
 		};
-		
+
 		class GradeTooLowException: public std::exception
 		{
 			public:
