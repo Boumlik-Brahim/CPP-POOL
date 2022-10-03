@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:34:34 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 10:42:59 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:30:33 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,9 @@ class Form
 	public:
 		Form();
 		Form(const std::string name, const int gradesigned, const int gradexecute, bool	signd);
+		Form(const Form &copy);
 
-		const std::string	getName() const;
-		bool				getSignd() const;
-		const int			getGradesigned() const;
-		const int			getGradexecute() const;
-
-		void beSigned(Bureaucrat &obj);
-
-		virtual void execute(Bureaucrat const & executor) const = 0;
+		Form & operator = (const Form &assign);
 
 		class GradeTooHighException: public std::exception
 		{
@@ -49,6 +43,15 @@ class Form
 			public:
 				virtual const char * what() const throw();
 		};
+
+		const std::string	getName() const;
+		bool				getSignd() const;
+		const int			getGradesigned() const;
+		const int			getGradexecute() const;
+
+		void beSigned(Bureaucrat &obj);
+
+		virtual void execute(Bureaucrat const & executor) const = 0;
 
 		~Form();		
 };

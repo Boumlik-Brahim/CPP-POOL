@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 14:15:00 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/03 13:16:03 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void Bureaucrat::signForm(Form &f)
 	}
 	else
 	{
-		std::cout << this->getName() << " couldn’t sign " << f.getName() << " because " << "<reason>" << "." << std::endl;
+		std::cout << this->getName() << " couldn’t sign " << f.getName() << " because he dosent have the grade to sign it." << std::endl;
 	}
 }
 

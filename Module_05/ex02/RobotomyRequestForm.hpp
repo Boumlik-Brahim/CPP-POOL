@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 12:00:22 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 15:37:48 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:17:02 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "Form.hpp"
 # include <iostream>
 # include <string>
+# include <ctime>
 
 class RobotomyRequestForm : public Form
 {

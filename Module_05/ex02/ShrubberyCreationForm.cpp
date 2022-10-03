@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:26 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 17:20:22 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/03 14:25:10 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,22 +42,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	{
 		throw (Bureaucrat::FormisnotsignedException());
 	}
-	else if( executor.getGrade() <= this->getGradexecute() )
+	else if( executor.getGrade() >= this->getGradexecute() )
 	{
 		throw (Bureaucrat::GradeTooLowException());
 	}
 	else
 	{
-		std::string	isciitree = " 	   _-_ 			\n"
-    							"	/~~   ~~\\ 		\n"
- 								" /~~         ~~\\ 	\n"
-								"{               } 	\n"
- 								" \\  _-     -_  / 	\n"
-   								"   ~  \\\\ //  ~ 	\n"
-								"_- -   | | _- _ 	\n"
-  								"  _ -  | |   -_ 	\n"
-      							"	  // \\\\ 	";
-		
 		std::cout << this->target << " executed" << std::endl;
 		std::string 	filename = this->target;
 		filename += "_shrubbery";
@@ -67,7 +57,15 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 			std::cout << "file creation failed" << std::endl;
 			exit(1);
 		}
-		out_file << isciitree;
+		out_file << " 	   _-_ 			\n";
+    	out_file << "	/~~   ~~\\ 		\n";
+ 		out_file << " /~~         ~~\\ 	\n";
+		out_file << "{               } 	\n";
+ 		out_file << " \\  _-     -_  / 	\n";
+   		out_file << "   ~  \\\\ //  ~ 	\n";
+		out_file << "_- -   | | _- _ 	\n";
+  		out_file << "  _ -  | |   -_ 	\n";
+      	out_file << "	  // \\\\ 	";
 	}
 }
 
