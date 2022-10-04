@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 15:30:48 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/04 09:34:29 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,20 @@ Bureaucrat::Bureaucrat(int grade, std::string name): name(name), grade(grade)
 	{
 		throw (Bureaucrat::GradeTooLowException());
 	}
+}
+
+Bureaucrat::Bureaucrat(const Bureaucrat &copy): name(copy.name), grade(copy.grade)
+{
+	std::cout << "\e[0;33mCopy Constructor called of Bureaucrat\e[0m" << std::endl;	
+}
+
+Bureaucrat & Bureaucrat::operator = (const Bureaucrat &assign)
+{
+	if(this != &assign)
+	{
+		this->grade = assign.grade;
+	}
+	return *this;
 }
 
 const std::string Bureaucrat::getName() const

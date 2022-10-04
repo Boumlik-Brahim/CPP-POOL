@@ -24,4 +24,5 @@ Custom exceptions offer the exception handling mechanism with useful information
     -   Nested Classes in C++:
 
 A nested class is a class which is declared in another enclosing class. A nested class is a member and as such has the same access rights as any other member. The members of an enclosing class have no special access to members of a nested class; the usual access rules shall be obeyed.
+
 #  Repetition:

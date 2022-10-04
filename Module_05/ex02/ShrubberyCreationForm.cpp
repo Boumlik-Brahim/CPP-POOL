@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:26 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/03 14:25:10 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/04 09:25:34 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,16 @@ ShrubberyCreationForm::ShrubberyCreationForm( std::string target ): Form("Shrubb
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of ShrubberyCreationForm\e[0m" << std::endl;
+	this->target = copy.target;
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreationForm &assign)
 {
-	(void) assign;
+	if(this != &assign)
+	{
+		this->target = assign.target;
+	}
 	return *this;
 }
 

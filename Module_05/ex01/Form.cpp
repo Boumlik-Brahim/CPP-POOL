@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:35:17 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/03 11:57:59 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/04 09:32:22 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,17 @@ Form::Form(const std::string name, const int gradesigned, const int gradexecute,
 	}
 }
 
-Form::Form(const Form &copy): name(copy.getName()), gradesigned(copy.getGradesigned()), gradexecute(copy.getGradexecute()), signd(copy.getSignd())
+Form::Form(const Form &copy): name(copy.name), gradesigned(copy.gradesigned), gradexecute(copy.gradexecute), signd(copy.signd)
 {
 	std::cout << "\e[0;33mCopy Constructor called of Form\e[0m" << std::endl;
 }
 
 Form & Form::operator = (const Form &assign)
 {
+	if(this != &assign)
+	{
+		this->signd = assign.signd;
+	}
 	return *this;
 }
 

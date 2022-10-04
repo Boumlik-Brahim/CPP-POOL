@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:01:55 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/01 14:13:53 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/04 09:00:51 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PresidentialPardonForm : public Form
 		PresidentialPardonForm( std::string	target );
 		PresidentialPardonForm(const PresidentialPardonForm &copy);
 
-		PresidentialPardonForm & operator=(const PresidentialPardonForm &assign);
+		PresidentialPardonForm & operator = (const PresidentialPardonForm &assign);
 
 		void execute(Bureaucrat const & executor) const;
 

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 12:00:27 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/03 14:47:46 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/04 09:04:37 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,16 @@ RobotomyRequestForm::RobotomyRequestForm( std::string target ): Form("Robotomy",
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of RobotomyRequestForm\e[0m" << std::endl;
+	this->target = copy.target;
 }
 
 RobotomyRequestForm & RobotomyRequestForm::operator = (const RobotomyRequestForm &assign)
 {
-	(void) assign;
+	if(this != &assign)
+	{
+		this->target = assign.target;
+	}
 	return *this;
 }
 
