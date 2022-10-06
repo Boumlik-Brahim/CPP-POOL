@@ -13,7 +13,13 @@ Exceptions allow control to be passed from one program area to another. The thre
     - try: It contains that code segment that can cause an error and needs to throw an exception.   
     - catch: the block called when an exception is thrown. In this block of code, we can inform the user about the error and end the program programmatically if required.
 
-    -    Exception Class Hierarchy:
+    -   Exception Handling in C++:
+
+Exception Handling in C++ consists of two parts:
+    - Error detector: where we call throw statement.
+    - Error handler: where we write the try-catch statement.
+
+    -   Exception Class Hierarchy:
     
 ![screenshot](../assets/exceptionhierarchy.png)
 
