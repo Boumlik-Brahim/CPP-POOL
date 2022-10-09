@@ -6,7 +6,7 @@
 #    By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 09:49:03 by bbrahim           #+#    #+#              #
-#    Updated: 2022/10/06 09:50:09 by bbrahim          ###   ########.fr        #
+#    Updated: 2022/10/09 18:36:02 by bbrahim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX = c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp
+SRC = Conversion.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

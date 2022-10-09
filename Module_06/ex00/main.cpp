@@ -6,19 +6,48 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:49:06 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/06 10:31:54 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/09 18:55:25 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
-# include <string>
+#include "Conversion.hpp"
 
-int main(int argc, char const *argv[])
+// bool chkdisplayable()
+// {
+//    return(0);
+// }
+
+// bool chkchar()
+// {
+//    return(0);  
+// }
+
+// bool chkint()
+// {  
+//    return(0);
+// }
+
+// bool chkfloat()
+// {  
+//    return(0);
+// }
+
+// bool chkdouble()
+// {
+//    return(0);
+// }
+
+int main(int ac, char const *av[])
 {
-   std::cout << "char: Non displayable" << std::endl;
-   std::cout << "int: 0" << std::endl;
-   std::cout << "float: 0.0f" << std::endl;
-   std::cout << "double: 0.0" << std::endl;
+   if (ac != 2)
+	{
+		std::cout << "ERROR" << std::endl;
+		exit(1);
+	}
+   Conversion obj(av[1]);
+   std::cout << obj.getliteral() << std::endl;
+   obj.setliteral("6");
+   std::cout << obj.getliteral() << std::endl;
 
    return 0;
 }
