@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:28:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/09 18:53:30 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/10 14:13:12 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string> 
+# include <iomanip> 
 
 class Conversion
 {
@@ -30,12 +31,14 @@ class Conversion
 		std::string getliteral() const;
 		void setliteral( std::string literal );
 
-		void tochar( std::string literal );
-		void toint( std::string literal );
-		void tofloat( std::string literal );
-		void todouble( std::string literal );
+		void tochar();
+		void toint();
+		void tofloat();
+		void todouble();
 
 		~Conversion();		
 };
+
+bool isprintable( char c );
 
 #endif
