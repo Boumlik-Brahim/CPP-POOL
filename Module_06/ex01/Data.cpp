@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:48:46 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/10 17:16:19 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 16:00:17 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ uintptr_t serialize(Data* ptr)
 
 Data* deserialize(uintptr_t raw)
 {
-	Data *obj;
-	obj = reinterpret_cast<Data*>(raw);
+	Data *obj = reinterpret_cast<Data*>(raw);
 	return(obj);
 }
 

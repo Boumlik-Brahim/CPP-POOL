@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:28:22 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/11 10:09:03 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 15:11:42 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,14 @@ void Conversion::tochar()
 	try
 	{
 		res = stoi(this->literal);
-		char c = static_cast<char>(res);
-		if(isprintable(c) == EXIT_SUCCESS)
-			std::cout << "char: '" << c << "'"<< std::endl;
+		if(res > 0)
+		{
+			char c = static_cast<char>(res);
+			if(isprintable(c) == EXIT_SUCCESS)
+				std::cout << "char: '" << c << "'"<< std::endl;
+			else
+				std::cout << "char: " << "Non displayable" << std::endl;
+		}
 		else
 			std::cout << "char: " << "Non displayable" << std::endl;
 	}
