@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:49:06 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/10 18:47:33 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 11:16:01 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 int main(int ac, char const *av[])
 {
-   Base *b;
-
-   b = generate();
+   Base *b = generate();
+   identify(b);
+   identify(*b);
 
    delete b;
    return 0;

@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:28:22 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/10 14:56:08 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 10:09:03 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ void Conversion::tochar()
 		else
 			std::cout << "char: " << "Non displayable" << std::endl;
 	}
-	catch ( std::invalid_argument & e)
+	catch (const std::invalid_argument & e)
 	{
 		std::cout << "char: impossible" << std::endl;
 	}
-	catch ( std::out_of_range & e) 
+	catch (const std::out_of_range & e) 
 	{
     	std::cerr << "Out of Range error: " << std::endl;
   	}
@@ -86,11 +86,11 @@ void Conversion::toint()
 		res = stoi(this->literal);
 		std::cout << "int: " << res << std::endl;
 	}
-	catch ( std::invalid_argument & e)
+	catch (const std::invalid_argument & e)
 	{
 		std::cout << "int: impossible" << std::endl;
 	}
-	catch ( std::out_of_range & e) 
+	catch (const std::out_of_range & e) 
 	{
     	std::cerr << "Out of Range error: " << std::endl;
   	}
@@ -105,11 +105,11 @@ void Conversion::tofloat()
 		res = std::stof(this->literal);
 		std::cout << "float: " << std::fixed << std::setprecision(1) << res << "f" << std::endl;
 	}
-	catch ( std::invalid_argument & e)
+	catch (const std::invalid_argument & e)
 	{
 		std::cout << "float: impossible" << std::endl;
 	}
-	catch ( std::out_of_range & e) 
+	catch (const std::out_of_range & e) 
 	{
     	std::cerr << "Out of Range error: " << std::endl;
   	}
@@ -124,11 +124,11 @@ void Conversion::todouble()
 		res = std::stod(this->literal);
 		std::cout << "double: " << res << std::endl;
 	}
-	catch ( std::invalid_argument & e)
+	catch (const std::invalid_argument & e)
 	{
 		std::cout << "double: impossible" << std::endl;
 	}
-	catch ( std::out_of_range & e) 
+	catch (const std::out_of_range & e) 
 	{
     	std::cerr << "Out of Range error: " << std::endl;
   	}

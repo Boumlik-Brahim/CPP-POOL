@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:24:10 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/10 18:46:36 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 11:15:41 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Base
 	private:
 
 	public:
+		Base();
 		virtual ~Base();		
 };
 
