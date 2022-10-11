@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:24:10 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/11 11:15:41 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/11 17:58:17 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Base
 
 	public:
 		Base();
-		virtual ~Base();		
+		virtual ~Base();
 };
 
 Base * generate(void);
