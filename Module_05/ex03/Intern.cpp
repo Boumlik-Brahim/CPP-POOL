@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 11:08:36 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/02 15:16:42 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/12 15:29:50 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ Intern::Intern()
 
 Intern::Intern(const Intern &copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of Intern\e[0m" << std::endl;
 }
 
 Intern & Intern::operator=(const Intern &assign)
 {
-	(void) assign;
 	return *this;
 }
 

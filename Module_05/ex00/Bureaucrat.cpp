@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:39 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/04 09:34:29 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/12 09:38:51 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ std::ostream& operator << (std::ostream &outobj, const Bureaucrat &obj)
 {
 	outobj << obj.getName() << ", bureaucrat grade " << obj.getGrade();
     return(outobj);
-
 }
 
 Bureaucrat::~Bureaucrat()

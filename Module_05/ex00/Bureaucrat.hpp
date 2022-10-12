@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:33 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/04 09:33:48 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/12 11:07:10 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Bureaucrat
 	public:
 		Bureaucrat();
 		Bureaucrat( int grade, std::string name );
-		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat( const Bureaucrat &copy );
 
 		Bureaucrat & operator = (const Bureaucrat &assign);
-	
+
 		class GradeTooHighException: public std::exception
 		{
 			public:

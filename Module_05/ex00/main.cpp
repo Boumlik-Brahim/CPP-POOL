@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:44 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/04 10:31:52 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/12 11:45:35 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int main()
 {
-    try
-    {
-        Bureaucrat obj(0, "bureaucrat");
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
+    // try
+    // {
+    //     Bureaucrat obj(0, "bureaucrat");
+    // }
+    // catch (std::exception & e)
+    // {
+    //     std::cerr << e.what() << std::endl;
+    // }
     
     // try
     // {
@@ -53,17 +53,17 @@ int main()
     //     std::cerr << e.what() << std::endl;
     // }
     
-    // Bureaucrat obj1;
-    // try
-    // {
-    //     obj1.decrimentgrad();
-    // }
-    // catch (std::exception & e)
-    // {
-    //     std::cerr << e.what() << std::endl;
-    // }
+    Bureaucrat obj1;
+    try
+    {
+        obj1.decrimentgrad();
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
     
-    // std::cout << obj1 << std::endl;
+    std::cout << obj1 << std::endl;
 
     return 0;
 }
