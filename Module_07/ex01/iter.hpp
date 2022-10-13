@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:19:41 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/12 18:28:03 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/13 15:44:12 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,19 @@
 # include <string> 
 
 template <typename I>
-I iter(I arayaddress, I arraylenght, I function)
+void function(I arayaddress)
 {
-    
+    std::cout << arayaddress << std::endl;
+}
+
+template <typename I>
+void iter(I *arayaddress, int arraylenght, void function(I arayaddress))
+{
+    int i = -1;
+    while(++i < arraylenght)
+    {
+        function(arayaddress[i]);
+    }
 }
 
 #endif
