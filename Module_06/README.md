@@ -3,6 +3,7 @@
 # C++ casts
 
 A type cast is basically a conversion from one type to another. There are two types of type conversion:
+
     - Implicit Type Conversion(automatic type conversion):
 
         -Done by the compiler on its own, without any external trigger from the user.
