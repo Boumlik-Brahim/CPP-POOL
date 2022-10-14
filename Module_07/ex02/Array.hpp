@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:30:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/13 17:30:57 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/14 16:30:07 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template <typename T> class Array
 {
     private:
         T   *array;
-        int size;
+        int sizeofarray;
     public:
         Array();
         Array( unsigned int n );
@@ -28,7 +28,16 @@ template <typename T> class Array
 
         Array & operator = ( const Array &assign );
 
-        int & operator[](int index);
+        class OutOfBoundExeption: public std::exception
+		{
+			public:
+				virtual const char * what() const throw()
+                {
+                    return("out of bound exeption");
+                }
+		};
+
+        T & operator[](int index);
 
         int size();
         
@@ -37,50 +46,66 @@ template <typename T> class Array
 
 template <typename T> Array<T>::Array()
 {
+    std::cout << "\e[0;33mDefault Constructor called of Array\e[0m" << std::endl;
     array = nullptr;
 }
 
 template <typename T> Array<T>::Array( unsigned int n )
 {
-    array = new T[n]; 
+    std::cout << "\e[0;33mParametrized Constructor called of Array\e[0m" << std::endl;
+    sizeofarray = n;
+    array = new T[n];
 }
 
 template <typename T> Array<T>::Array( const Array &copy )
 {
-    
+    std::cout << "\e[0;33mCopy Constructor called of Array\e[0m" << std::endl;
+    sizeofarray = copy.sizeofarray;
+    array = new T[sizeofarray];
+    int i = 0;
+    while(i < sizeofarray)
+    {
+        array[i] = copy.array[i];
+        i++;
+    }
 }
 
-template <typename T> Array & Array<T>::operator = ( const Array &assign )
+template <typename T> Array<T> & Array<T>::operator = ( const Array &assign )
 {
     if(this != &assign)
     {
-        
+        delete [] array;
+        array = nullptr;
+        sizeofarray = assign.sizeofarray;
+        array = new T[sizeofarray];
+        int i = 0;
+        while(i < sizeofarray)
+        {
+            array[i] = assign.array[i];
+            i++;
+        }
     }
     return(*this);
 }
 
 template <typename T> int Array<T>::size()
 {
-    int i = 0;
-    while (array[i])
-    {
-        i++;
-    }
-    return(i);
+    return(sizeofarray);
 }
 
-template <typename T> int& Array::operator[](int index)
+template <typename T> T & Array<T>::operator[](int index)
 {
-   if (index >= this->size) 
+   if(index >= this->sizeofarray || index < 0)
    {
-        throw
-   }
+        throw OutOfBoundExeption();
+    }
    return array[index];
 }
 
-template <typename T> Array<T>::Array()
+template <typename T> Array<T>::~Array()
 {
-    delete [] T;
+    std::cout << "\e[0;31mDestructor called of Array\e[0m" << std::endl;
+    delete [] array;
 }
 
 #endif

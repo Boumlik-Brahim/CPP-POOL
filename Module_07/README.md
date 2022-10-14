@@ -1,1 +1,15 @@
 # Module 07
+
+# templates:
+
+A template is a simple yet very powerful tool in C++. The simple idea is to pass data type as a parameter so that we don’t need to write the same code for different data types.
+
+C++ adds two new keywords to support templates: ‘template’ and ‘typename’. The second keyword can always be replaced by the keyword ‘class’.
+
+    -   Function Templates:
+
+Generic function that can be used for different data types.
+
+    -   Class Templates:
+
+like function templates, class templates are useful when a class defines something that is independent of the data type. Can be useful for classes like LinkedList, BinaryTree, Stack, Queue, Array, etc. 
