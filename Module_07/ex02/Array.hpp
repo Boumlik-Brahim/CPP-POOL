@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:30:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/14 16:30:07 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/16 16:29:07 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ template <typename T> class Array
         T & operator[](int index);
 
         int size();
-        
+
         ~Array();
 };
 
@@ -54,18 +54,18 @@ template <typename T> Array<T>::Array( unsigned int n )
 {
     std::cout << "\e[0;33mParametrized Constructor called of Array\e[0m" << std::endl;
     sizeofarray = n;
-    array = new T[n];
+    array = new(std::nothrow) T[n];
 }
 
 template <typename T> Array<T>::Array( const Array &copy )
 {
     std::cout << "\e[0;33mCopy Constructor called of Array\e[0m" << std::endl;
-    sizeofarray = copy.sizeofarray;
-    array = new T[sizeofarray];
+    this->sizeofarray = copy.sizeofarray;
+    this->array = new(std::nothrow) T[this->sizeofarray];
     int i = 0;
-    while(i < sizeofarray)
+    while(i < this->sizeofarray)
     {
-        array[i] = copy.array[i];
+        this->array[i] = copy.array[i];
         i++;
     }
 }
@@ -74,14 +74,14 @@ template <typename T> Array<T> & Array<T>::operator = ( const Array &assign )
 {
     if(this != &assign)
     {
-        delete [] array;
-        array = nullptr;
-        sizeofarray = assign.sizeofarray;
-        array = new T[sizeofarray];
+        delete [] this->array;
+        this->array = nullptr;
+        this->sizeofarray = assign.sizeofarray;
+        this->array = new(std::nothrow) T[sizeofarray];
         int i = 0;
-        while(i < sizeofarray)
+        while(i < this->sizeofarray)
         {
-            array[i] = assign.array[i];
+            this->array[i] = assign.array[i];
             i++;
         }
     }
@@ -95,11 +95,11 @@ template <typename T> int Array<T>::size()
 
 template <typename T> T & Array<T>::operator[](int index)
 {
-   if(index >= this->sizeofarray || index < 0)
-   {
+    if(index >= this->sizeofarray || index < 0)
+    {
         throw OutOfBoundExeption();
     }
-   return array[index];
+    return array[index];
 }
 
 template <typename T> Array<T>::~Array()

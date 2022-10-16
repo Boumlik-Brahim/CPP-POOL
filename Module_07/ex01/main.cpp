@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:19:43 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/16 11:57:51 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/16 14:26:36 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main( void )
 
     float flarr[5] = {0.0f,1.5f,2.5f,3.5f,4.5f};
     iter(flarr, 5, function);
-    
+
     char arr[5] = {'a','b','c','d','e'};
     iter(arr, 5, function);
 

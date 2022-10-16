@@ -21,4 +21,10 @@ A template is visited twice by the compiler. On first pass it’s simply checked
 
     -   Class Templates:
 
-like function templates, class templates are useful when a class defines something that is independent of the data type. Can be useful for classes like LinkedList, BinaryTree, Stack, Queue, Array, etc. 
+like function templates, class templates are useful when a class defines something that is independent of the data type. Can be useful for classes like LinkedList, BinaryTree, Stack, Queue, Array, etc.
+
+Because a template can be used (thus compiled) from anywhere in code, the compiler needs access to its definition from anywhere. This is why template definitions are typically implemented in header files
+
+When using class templates, you pass the unspecified types as template arguments. The class template is then compiled (and instantiated) for those types.
+
+With class templates, only the methods that are called are actually instantiated (second pass compilation).
