@@ -6,7 +6,7 @@
 #    By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 18:19:39 by bbrahim           #+#    #+#              #
-#    Updated: 2022/10/12 18:20:36 by bbrahim          ###   ########.fr        #
+#    Updated: 2022/10/16 11:43:20 by bbrahim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,14 @@ CXX = c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
 
+HEADER = iter.hpp
+
 SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
+
+%.o: %.cpp $(HEADER)
+	$(CXX) $(FLAGS) -c $< -o $@
 
 all: $(NAME)
 
