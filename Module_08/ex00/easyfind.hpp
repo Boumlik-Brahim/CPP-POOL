@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:19:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/16 18:46:24 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/17 11:56:17 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,29 @@
 # include <iostream>
 # include <string> 
 
-template <typename T>
-void   easyfind(T intcontainer, int i)
+
+class Nooccurrenceisfound: public std::exception
 {
-    std::find_first_of(intcontainer, i);
+    public:
+        virtual const char * what() const throw()
+        {
+            return("No occurrence is found");
+        }
+};
+
+template <typename T>
+void   easyfind(T intcontainer, int num)
+{
+    for (unsigned long int i = 0; i <  sizeof(intcontainer) ; i++)
+    {
+        if (intcontainer[i] == num)
+        {
+            std::cout << intcontainer[i] << std::endl;
+            return ;
+        }
+    }
+    throw Nooccurrenceisfound();
+    // std::cout << num << std::endl;
 }
 
 #endif
