@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/16 18:53:28 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/17 16:24:39 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,37 @@
 
 # include <iostream>
 # include <string> 
+# include <vector>
+# include <array>
 
+class Span
+{
+    private:
+        std::vector<int>    maximum;
+        unsigned int        N;
+    public:
+        Span();
+        Span( unsigned int N );
+
+        void addNumber( unsigned int N );
+        int shortestSpan();
+        int longestSpan();
+
+        class Elementsalreadystored: public std::exception
+		{
+			public:
+				virtual const char * what() const throw();
+		};
+
+        class Nospancanbefound: public std::exception
+		{
+			public:
+				virtual const char * what() const throw();
+		};
+
+        // void addmanyNumber( );
+
+        ~Span();
+};
 
 #endif

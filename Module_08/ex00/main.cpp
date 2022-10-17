@@ -6,18 +6,21 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:19:16 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/17 11:56:54 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/17 16:23:53 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include"easyfind.hpp"
-# include <vector>
-# include <array>
 
 int main( void )
 {
-    // std::array<int, 5> intarray = {11,22,33};
-    // std::vector<int> numbers = {1, 100, 10, 70, 100};
+    std::array<int, 5> intarray ;
+
+    intarray[0] = 11;
+    intarray[1] = 12;
+    intarray[2] = 13;
+    intarray[3] = 14;
+    intarray[4] = 15;
 
     std::vector<int> orderedSides;
     orderedSides.push_back(1);
@@ -32,6 +35,7 @@ int main( void )
     try
     {
         easyfind(orderedSides, 3);
+        easyfind(intarray, 13);
     }
     catch(const std::exception& e)
     {
