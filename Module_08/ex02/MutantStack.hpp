@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:52:52 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/18 18:28:52 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/18 18:56:27 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,24 @@
 # include <iostream>
 # include <string> 
 # include <stack>
+# include <list>
 
-template <class Type, class Container = std::deque<Type> > 
+template <class Type> 
 class MutantStack : public std::stack<Type>
 {
     private:
     public:
-        MutantStack();
+        MutantStack(){}
+        MutantStack(const MutantStack &copy) : std::stack<Type>(copy) {}
 
         MutantStack & operator=(const MutantStack &assign)
         {
-            if(this != &assign)
-            {
-                std::cout << "hh" << std::endl;
-            }
+            (void) assign;
             return *this;
         }
 
         // template <typename iterator>
-        typedef typename Container::iterator iterator;
+        typedef typename MutantStack<Type>::container_type::iterator iterator;
         iterator begin()
         {
             return this->c.begin(); 
@@ -44,8 +43,19 @@ class MutantStack : public std::stack<Type>
         {
             return this->c.end();
         }
+        
+        typedef typename MutantStack<Type>::container_type::reverse_iterator reverse_iterator;
+        reverse_iterator rbegin()
+        {
+            return this->c.rbegin(); 
+        }
 
-        ~MutantStack();
+        reverse_iterator rend()
+        {
+            return this->c.rend();
+        }
+
+        ~MutantStack(){}
 };
 
 #endif

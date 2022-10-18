@@ -65,6 +65,7 @@
         "deque": "cpp",
         "fstream": "cpp",
         "stack": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "list": "cpp"
     }
 }
