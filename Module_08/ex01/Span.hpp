@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/18 10:22:50 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:14:12 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ class Span
 			public:
 				virtual const char * what() const throw();
 		};
+
+        std::vector<int> getmaximum() const;
 
         void addmanyNumber(std::vector<int>::iterator bg, std::vector<int>::iterator end);
 

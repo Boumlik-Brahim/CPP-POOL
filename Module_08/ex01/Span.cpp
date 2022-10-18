@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:46 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/18 11:50:58 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:14:08 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ Span::Span( unsigned int N )
 
 void Span::addNumber( unsigned int N )
 {
-    if(maximum.size() >= N)
+    if(maximum.size() >= this->N)
         throw Span::Elementsalreadystored();
     maximum.push_back(N);
+  
 }
 
 int Span::shortestSpan()
@@ -67,18 +68,18 @@ const char * Span::Nospancanbefound::what() const throw()
 	return("Nospancanbefound");
 }
 
+std::vector<int> Span::getmaximum() const
+{
+    return(maximum);
+}
+
 void Span::addmanyNumber(std::vector<int>::iterator bg, std::vector<int>::iterator end)
 {
-    std::cout << "hgf" << std::endl;
-    // if(bg < end)
-    //     return ;
-    // maximum.insert(maximum.end(),bg, end);
-    unsigned long int i = 0;
-    while (bg < end)
+    if(bg == end)
+        return ;
+    for (std::vector<int>::iterator i = bg ; i != end; i++)
     {
-        std::cout << "hgf" << std::endl;
-        maximum.push_back(i);
-        i++;
+        maximum.push_back(*i);
     }
 }
 
