@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:46 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/17 18:47:59 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/18 11:50:58 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,21 @@ const char * Span::Elementsalreadystored::what() const throw()
 const char * Span::Nospancanbefound::what() const throw()
 {
 	return("Nospancanbefound");
+}
+
+void Span::addmanyNumber(std::vector<int>::iterator bg, std::vector<int>::iterator end)
+{
+    std::cout << "hgf" << std::endl;
+    // if(bg < end)
+    //     return ;
+    // maximum.insert(maximum.end(),bg, end);
+    unsigned long int i = 0;
+    while (bg < end)
+    {
+        std::cout << "hgf" << std::endl;
+        maximum.push_back(i);
+        i++;
+    }
 }
 
 Span::~Span()

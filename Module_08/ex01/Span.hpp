@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:49 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/17 16:24:39 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/18 10:22:50 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class Span
 				virtual const char * what() const throw();
 		};
 
-        // void addmanyNumber( );
+        void addmanyNumber(std::vector<int>::iterator bg, std::vector<int>::iterator end);
 
         ~Span();
 };
