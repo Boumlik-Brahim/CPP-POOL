@@ -36,3 +36,15 @@ Iterators are used to point at the memory addresses of STL containers. They are 
 - end() :- This function is used to return the after end position of the container.
 
 # algorithms:
+
+
+// typedef typename MutantStack<T>::container_type::reverse_iterator reverse_iterator;
+// reverse_iterator rbegin()
+// {
+//     return this->c.rbegin(); 
+// }
+
+// reverse_iterator rend()
+// {
+//     return this->c.rend();
+// }

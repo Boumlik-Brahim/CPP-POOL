@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:19:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/19 15:22:06 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:41:19 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <algorithm> 
 # include <iterator> 
 # include <vector>
 # include <array>
