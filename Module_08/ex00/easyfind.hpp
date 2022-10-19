@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:19:13 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/18 16:24:06 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/19 15:22:06 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # include <iostream>
 # include <string>
+# include <iterator> 
 # include <vector>
 # include <array>
+# include <deque>
+# include <list>
 
 class Nooccurrenceisfound: public std::exception
 {
@@ -30,16 +33,13 @@ class Nooccurrenceisfound: public std::exception
 template <typename T>
 void   easyfind(T intcontainer, int num)
 {
-    for (unsigned long int i = 0; i <  sizeof(intcontainer) ; i++)
-    {
-        if (intcontainer[i] == num)
-        {
-            std::cout << intcontainer[i] << std::endl;
-            return ;
-        }
-    }
-    throw Nooccurrenceisfound();
-    // std::cout << num << std::endl;
+    typename T::iterator end = intcontainer.end();
+    typename T::iterator begin = intcontainer.begin();
+    typename T::iterator finditer = std::find(begin, end, num);
+
+    if(finditer == end)
+        throw Nooccurrenceisfound();
+    std::cout << *finditer << std::endl;
 }
 
 #endif
