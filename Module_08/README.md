@@ -20,7 +20,7 @@ Sequence containers implement data structures that can be accessed sequentially.
         - array: Static contiguous array (class template).
 
 - Array classes knows its own size.
-- Array classes don’t decay into pointers.
+- Array classes don’t decay into pointers(The loss of type and dimensions of an array is known as decay of an array).
 - Array classes are generally more efficient, light-weight and reliable
 - functions: at(), get(), operator[],front(),back(),size(),max_size(),swap(),empty(),fill()
 
@@ -45,11 +45,23 @@ Sequence containers implement data structures that can be accessed sequentially.
 - As compared to vector, the list has slow traversal, but once a position has been found, insertion and deletion are quick.
 - when we say a List, we talk about a doubly linked list. For implementing a singly linked list, we use a forward list.
 
-    -   Container adaptors:
+    -   Container adaptors(Container objects hold data of a similar data type):
 
 Container adaptors provide a different interface for sequential containers.
 
         - stack: Adapts a container to provide stack (LIFO data structure) (class template).
+
+- Stacks are a type of container adaptors with LIFO(Last In First Out) type of working, where a new element is added at one end (top) and an element is removed from that end only.
+- Stack uses an encapsulated object of either vector or deque (by default) or list (sequential container class) as its underlying container, providing a specific set of member functions to access its elements.
+- You can create a stack from various sequence containers. If no container is provided, the deque containe will be used by default.
+- The functions: empty(),size(),top(),push(g),pop().
+- Stack Implementation
+![screenshot](../assets/stack.png)
+- Stack Syntax:
+template <class T, class Container = deque<Type> > class stack;
+Type – is the Type of element contained in the std::stack. It can be any valid C++ type or even a user-defined type.
+Container – is the Type of underlying container object.
+
         - queue: Adapts a container to provide queue (FIFO data structure) (class template).
 
 # iterators:

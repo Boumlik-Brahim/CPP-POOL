@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:52:52 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/20 10:35:38 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/20 15:19:28 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stack>
 # include <list>
 
-template <typename T, class container=std::deque<T> >
+template <typename T, class Container=std::deque<T> >
 class MutantStack : public std::stack<T>
 {
     private:
