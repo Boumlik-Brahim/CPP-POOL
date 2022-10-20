@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:52:47 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/19 17:55:34 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/20 09:01:49 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main()
 {
+    /*--------------------------------------------------------------------------------------------------------------*/
+
     MutantStack<int> mstack;
 
     mstack.push(5);
@@ -43,6 +45,40 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+    
+    /*--------------------------------------------------------------------------------------------------------------*/
+    
+    // std::list<int> mstack;
+
+    // mstack.push_back(5);
+    // mstack.push_back(17);
+
+    // std::cout << mstack.back() << std::endl;
+
+    // mstack.pop_back();
+
+    // std::cout << mstack.size() << std::endl;
+
+    // mstack.push_back(3);
+    // mstack.push_back(5);
+    // mstack.push_back(737);
+    // //[...]
+    // mstack.push_back(0);
+
+    // std::list<int>::iterator it = mstack.begin();
+    // std::list<int>::iterator ite = mstack.end();
+
+    // ++it;
+    // --it;
+
+    // while (it != ite)
+    // {
+    //     std::cout << *it << std::endl;
+    //     ++it;
+    // }
+    // std::list<int> s(mstack);
+
+    /*--------------------------------------------------------------------------------------------------------------*/
 
     return 0;
 }
