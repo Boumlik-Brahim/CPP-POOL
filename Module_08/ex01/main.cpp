@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:57 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/19 17:27:54 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:11:24 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int main()
 
     std::cout << sp.shortestSpan() << std::endl;
     std::cout << sp.longestSpan() << std::endl;
-
     
     // Span sp = Span(1000000);
 

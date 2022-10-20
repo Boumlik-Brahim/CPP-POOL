@@ -6,7 +6,7 @@
 /*   By: bbrahim <bbrahim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:48:46 by bbrahim           #+#    #+#             */
-/*   Updated: 2022/10/19 17:35:25 by bbrahim          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:11:06 by bbrahim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Span & Span::operator=(const Span &assign)
 
 void Span::addNumber( unsigned int N )
 {
-    if(maximum.size() >= this->N)
+    if(maximum.size() == this->N)
         throw Span::Elementsalreadystored();
     maximum.push_back(N);
   
@@ -51,16 +51,18 @@ void Span::addNumber( unsigned int N )
 
 int Span::shortestSpan()
 {
-    int shortest_span;
+    int shortest_span = 0;
 
     if(maximum.size() <= 1)
         throw Span::Nospancanbefound();
-    for(unsigned int i = 0; i < maximum.size() - 1; i++)
+    std::vector<int>    tmp = maximum;
+    sort(tmp.begin(), tmp.end());
+    shortest_span = std::abs(tmp[0] - tmp[1]);
+    for(unsigned int i = 1; i < tmp.size() - 1; i++)
     {
-        shortest_span = std::abs(maximum[i] - maximum[i + 1]);
-        if(std::abs(maximum[i] - maximum[i + 1]) < shortest_span)
+        if(std::abs(tmp[i] - tmp[i + 1]) < shortest_span)
         {
-            shortest_span = std::abs(maximum[i] - maximum[i + 1]);
+            shortest_span = std::abs(tmp[i] - tmp[i + 1]);
         }
     }
     return(shortest_span);
